@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Devonshire|Merienda:400,700|Open+Sans:400,600');
+
+body {
+  background-image: url("/assets/Main-bg.jpg");
+}
+
+.main-menu ul{
+  list-style-type: none;
+}
