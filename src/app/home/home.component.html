@@ -4,12 +4,8 @@
 
   <div class ="main-menu">
     <nav>
-      <a>
-        <h1 class="menu">Stories</h1>
-      </a>
-      <a routerLink="/about">
-        <h1 class="menu">About</h1>
-      </a>
+      <a *ngFor="let option of menuOptions"
+         routerLink="/{{option}}"><h1 class="menu">{{option}}</h1></a>
     </nav>
   </div>
 
