@@ -3,7 +3,7 @@ webpackJsonp(["styles"],{
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "body::after {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: url('Main-bg.9abffb08620d7b1c15e5.jpg') no-repeat center center;\r\n  opacity: 0.6;\r\n  top: 0;\r\n  left: 0;\r\n  bottom: 0;\r\n  right: 0;\r\n}\r\n"
 
 /***/ }),
 

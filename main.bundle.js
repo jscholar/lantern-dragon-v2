@@ -114,14 +114,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\r\n  font-family: Merienda;\r\n  font-size: 6em;\r\n  font-weight: 400;\r\n  color: #4d64c4;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n  text-shadow: 1px 1px #202653;\r\n}\r\n\r\n.menu {\r\n  padding-left: 10px;\r\n  font-size: 4em;\r\n  color: #4d64c4;\r\n  width: 400px;\r\n  background: rgba(169, 169, 236, 0.2);\r\n}\r\n\r\n.main-menu ul{\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  list-style-type: none;\r\n  white-space: nowrap;\r\n  float: left;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.menu:hover {\r\n  color: #ff362e;\r\n  padding-left: 15px;\r\n}\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div id=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
