@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { StoriesComponent } from './stories/stories.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { StoriesComponent } from './stories/stories.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    StoriesComponent
+    StoriesComponent,
+    NavbarComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
+
+
 h1 {
   font-family: Merienda;
-  font-size: 6em;
   font-weight: 400;
-  color: #4d64c4;
+  color: #83c1d9;
   user-select: none;
-  text-shadow: 1px 1px #202653;
+  text-shadow: 1px 1px #2a4353;
 }
 
 a {
@@ -20,16 +21,24 @@ a {
 }
 
 .main-menu nav{
+  margin-top: 50px;
   width: fit-content;
   list-style-type: none;
   white-space: nowrap;
   float: left;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  min-height: 100vh;
 }
 
 .menu:hover, .active {
   color: #ff362e;
   padding-left: 15px;
   margin-right: 15px;
+}
+
+#title {
+  font-size: 8em;
 }

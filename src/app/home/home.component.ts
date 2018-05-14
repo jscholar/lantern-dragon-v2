@@ -7,7 +7,7 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  menuOptions: String[] = ['stories', 'about'];
+  menuOptions: String[] = ['stories', 'gallery', 'about', 'extras'];
   fadeLeft(): void {
     $('.menu').fadeOut(1000, function () {
       console.log('finished fading');
