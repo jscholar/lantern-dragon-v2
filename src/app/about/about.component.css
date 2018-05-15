@@ -1,4 +1,3 @@
-
 p {
   float: left;
   white-space: pre;
@@ -16,4 +15,9 @@ a {
 a:hover {
   color: #83c1d9;
   text-decoration: underline;
+}
+
+#container {
+  white-space: nowrap;
+  overflow: hidden;
 }
