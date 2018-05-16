@@ -42,7 +42,7 @@ module.exports = "/*!\n * Bootstrap v4.1.1 (https://getbootstrap.com/)\n * Copyr
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = "/*body::after {*/\r\n  /*content: \"\";*/\r\n  /*display: block;*/\r\n  /*position: absolute;*/\r\n  /*z-index: -1;*/\r\n  /*width: 100%;*/\r\n  /*height: 100%;*/\r\n  /*background: url('assets/lantern-bg.JPG') no-repeat center center;*/\r\n  /*opacity: 0.6;*/\r\n  /*top: 0;*/\r\n  /*left: 0;*/\r\n  /*bottom: 0;*/\r\n  /*right: 0;*/\r\n  /*}*/\r\n  body {\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat center center fixed;\r\n  background-size: 4156px;\r\n  color: white;\r\n}\r\n  a {\r\n  text-decoration: none;\r\n}\r\n\r\n"
+module.exports = "/*body::after {*/\r\n  /*content: \"\";*/\r\n  /*display: block;*/\r\n  /*position: absolute;*/\r\n  /*z-index: -1;*/\r\n  /*width: 100%;*/\r\n  /*height: 100%;*/\r\n  /*background: url('assets/lantern-bg.JPG') no-repeat center center;*/\r\n  /*opacity: 0.6;*/\r\n  /*top: 0;*/\r\n  /*left: 0;*/\r\n  /*bottom: 0;*/\r\n  /*right: 0;*/\r\n  /*}*/\r\n  body {\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat center center fixed;\r\n  background-size: cover;\r\n  color: white;\r\n}\r\n  a {\r\n  text-decoration: none;\r\n}\r\n\r\n"
 
 /***/ }),
 
