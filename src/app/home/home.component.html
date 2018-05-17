@@ -1,10 +1,14 @@
-
-  <a routerLink=""><h1 id="title">Lantern Dragon Works</h1></a>
-
-  <div class ="main-menu">
-    <nav>
-      <a *ngFor="let option of menuOptions"
-         routerLink="/{{option}}"><h1 class="menu">{{option}}</h1></a>
-    </nav>
+<div id="container">
+  <div id="title">
+    <a routerLink="">Lantern Dragon Works</a>
   </div>
 
+  <div id="main-menu">
+    <a *ngFor="let option of menuOptions" class="col-1-4"
+      routerLink="/{{option}}" [ngClass]="{'active': option === selected}">
+      <div class="menu">
+        <span>{{option}}</span>
+      </div>
+    </a>
+  </div>
+</div>
