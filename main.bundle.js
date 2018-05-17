@@ -27,7 +27,7 @@ module.exports = "p {\r\n  float: left;\r\n  white-space: pre;\r\n  width: 1200p
 /***/ "./src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\r\n\r\n<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection fictional of novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n"
+module.exports = "<app-home [selected]=\"'about'\"></app-home>\r\n\r\n<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection fictional of novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -228,7 +228,7 @@ module.exports = ""
 /***/ "./src/app/gallery/gallery.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n\n<div class=\"container\">\n\n</div>\n"
+module.exports = "<app-home [selected]=\"'gallery'\"></app-home>\n\n<div class=\"container\">\n</div>\n"
 
 /***/ }),
 
@@ -271,14 +271,14 @@ var GalleryComponent = /** @class */ (function () {
 /***/ "./src/app/home/home.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\r\n  font-family: Merienda;\r\n  font-weight: 400;\r\n  color: #83c1d9;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n  text-shadow: 1px 1px #2a4353;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\n.menu {\r\n  margin: 20px;\r\n  padding-left: 10px;\r\n  font-size: 4em;\r\n  width: 400px;\r\n  background: rgba(169, 169, 236, 0.2);\r\n}\r\n\r\n.main-menu nav{\r\n  margin-top: 50px;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  list-style-type: none;\r\n  white-space: nowrap;\r\n  float: left;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  height: 100%;\r\n  background-color: rgba(0,0,0,0.7);\r\n  min-height: 100vh;\r\n}\r\n\r\n.menu:hover, .active {\r\n  color: #ff362e;\r\n  padding-left: 15px;\r\n  margin-right: 15px;\r\n}\r\n\r\n#title {\r\n  font-size: 8em;\r\n  white-space: nowrap;\r\n}\r\n"
+module.exports = "[class*='col-'] {\r\n  float: left;\r\n  padding: 20px 20px 0;\r\n  width: inherit;\r\n}\r\n\r\n#title {\r\n  font-size: 6em;\r\n  white-space: nowrap;\r\n}\r\n\r\n#container {\r\n  font-family: Merienda;\r\n  color: #80c6d9;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n\r\n#main-menu {\r\n  background: rgba(0,0,0,0.7);\r\n  width: 400px;\r\n  height: 800px;\r\n  float: left;\r\n}\r\n\r\n.menu {\r\n  text-align: center;\r\n  font-size: 4em;\r\n  max-height: 120px;\r\n  min-width:120px;\r\n  background-color: rgba(105, 156, 168, 0.4);\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu:hover, .active {\r\n  color: #ff2f3b;\r\n  font-weight: bold;\r\n}\r\n\r\na {\r\n  text-decoration: inherit;\r\n  color: inherit;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <a routerLink=\"\"><h1 id=\"title\">Lantern Dragon Works</h1></a>\r\n\r\n  <div class =\"main-menu\">\r\n    <nav>\r\n      <a *ngFor=\"let option of menuOptions\"\r\n         routerLink=\"/{{option}}\"><h1 class=\"menu\">{{option}}</h1></a>\r\n    </nav>\r\n  </div>\r\n\r\n"
+module.exports = "<div id=\"container\">\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n    <a *ngFor=\"let option of menuOptions\" class=\"col-1-4\"\r\n      routerLink=\"/{{option}}\" [ngClass]=\"{'active': option === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{option}}</span>\r\n      </div>\r\n    </a>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -309,6 +309,10 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], HomeComponent.prototype, "selected", void 0);
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
@@ -384,7 +388,7 @@ module.exports = ".container {\r\n  background: url('cartoon_scroll.f80e33e567e6
 /***/ "./src/app/stories/stories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n\n<div class=\"container\">\n  <p class=\"text-block\">So sorry, turns out theres nothing here yet.</p>\n</div>\n"
+module.exports = "<app-home [selected]=\"'stories'\"></app-home>\n\n<div class=\"container\">\n  <p class=\"text-block\">So sorry, turns out there's nothing here yet.</p>\n</div>\n"
 
 /***/ }),
 
