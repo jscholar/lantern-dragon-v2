@@ -4,11 +4,14 @@
   </div>
 
   <div id="main-menu">
-    <a *ngFor="let option of menuOptions" class="col-1-4"
-      routerLink="/{{option}}" [ngClass]="{'active': option === selected}">
+
+    <a *ngFor="let section of sections" class="col-1-4"
+      routerLink="/{{section}}" [ngClass]="{'active': section === selected}">
       <div class="menu">
-        <span>{{option}}</span>
+        <span>{{section}}</span>
       </div>
     </a>
+
   </div>
+
 </div>

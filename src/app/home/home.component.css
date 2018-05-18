@@ -36,6 +36,10 @@
   font-weight: bold;
 }
 
+.separator {
+  text-align: center;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-declare var $: any;
+import {SECTIONS} from '../shared/constants/sections';
+
+const _SECTIONS = SECTIONS;
 
 @Component({
   selector: 'app-home',
@@ -7,15 +9,9 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  menuOptions: String[] = ['stories', 'gallery', 'about', 'extras'];
+  sections = SECTIONS;
   @Input() selected: String;
-  fadeLeft(): void {
-    $('.menu').fadeOut(1000, function () {
-      console.log('finished fading');
-    });
-  }
   constructor() { }
-
   ngOnInit() {
   }
 

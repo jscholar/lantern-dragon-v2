@@ -4,11 +4,12 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { StoriesComponent } from './stories/stories.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ExtrasComponent } from './extras/extras.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutComponent,
     StoriesComponent,
     NavbarComponent,
-    GalleryComponent
+    GalleryComponent,
+    ExtrasComponent
   ],
   imports: [
     BrowserModule,
