@@ -20,6 +20,7 @@
   width: 400px;
   height: 800px;
   float: left;
+  display: inline-block;
 }
 
 .menu {

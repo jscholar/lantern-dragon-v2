@@ -1,5 +1,5 @@
 p {
-  white-space: pre;
+  white-space: pre-wrap;
   font-size: 1.5em;
 }
 
@@ -14,8 +14,9 @@ a:hover {
 }
 
 #container {
-  width: 1200px;
   background-color: rgba(0,0,0,0.7);
   margin-left: 10px;
-  display: block;
+  display: inline-block;
+  position: absolute;
+  overflow-wrap: break-spaces;
 }
