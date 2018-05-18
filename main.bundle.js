@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "p {\r\n  float: left;\r\n  white-space: pre;\r\n  width: 1200px;\r\n  font-size: 1.5em;\r\n  background-color: rgba(0,0,0,0.7);\r\n  margin-left: 10px;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n}\r\n"
+module.exports = "p {\r\n  white-space: pre-wrap;\r\n  font-size: 1.5em;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  background-color: rgba(0,0,0,0.7);\r\n  margin-left: 10px;\r\n  display: inline-block;\r\n  position: absolute;\r\n  overflow-wrap: break-spaces;\r\n}\r\n"
 
 /***/ }),
 
@@ -78,6 +78,7 @@ var AboutComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -90,11 +91,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
     { path: 'about', component: __WEBPACK_IMPORTED_MODULE_3__about_about_component__["a" /* AboutComponent */] },
     { path: 'stories', component: __WEBPACK_IMPORTED_MODULE_4__stories_stories_component__["a" /* StoriesComponent */] },
     { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_5__gallery_gallery_component__["a" /* GalleryComponent */] },
+    { path: 'extras', component: __WEBPACK_IMPORTED_MODULE_6__extras_extras_component__["a" /* ExtrasComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -173,12 +176,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -200,7 +205,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__about_about_component__["a" /* AboutComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__stories_stories_component__["a" /* StoriesComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__["a" /* NavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__gallery_gallery_component__["a" /* GalleryComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__gallery_gallery_component__["a" /* GalleryComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__extras_extras_component__["a" /* ExtrasComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -212,6 +218,56 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/extras/extras.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/extras/extras.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-home [selected]=\"'extras'\"></app-home>\n"
+
+/***/ }),
+
+/***/ "./src/app/extras/extras.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExtrasComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExtrasComponent = /** @class */ (function () {
+    function ExtrasComponent() {
+    }
+    ExtrasComponent.prototype.ngOnInit = function () {
+    };
+    ExtrasComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-extras',
+            template: __webpack_require__("./src/app/extras/extras.component.html"),
+            styles: [__webpack_require__("./src/app/extras/extras.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ExtrasComponent);
+    return ExtrasComponent;
 }());
 
 
@@ -271,14 +327,14 @@ var GalleryComponent = /** @class */ (function () {
 /***/ "./src/app/home/home.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "[class*='col-'] {\r\n  float: left;\r\n  padding: 20px 20px 0;\r\n  width: inherit;\r\n}\r\n\r\n#title {\r\n  font-size: 6em;\r\n  white-space: nowrap;\r\n}\r\n\r\n#container {\r\n  font-family: Merienda;\r\n  color: #80c6d9;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n\r\n#main-menu {\r\n  background: rgba(0,0,0,0.7);\r\n  width: 400px;\r\n  height: 800px;\r\n  float: left;\r\n}\r\n\r\n.menu {\r\n  text-align: center;\r\n  font-size: 4em;\r\n  max-height: 120px;\r\n  min-width:120px;\r\n  background-color: rgba(105, 156, 168, 0.4);\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu:hover, .active {\r\n  color: #ff2f3b;\r\n  font-weight: bold;\r\n}\r\n\r\na {\r\n  text-decoration: inherit;\r\n  color: inherit;\r\n}\r\n"
+module.exports = "[class*='col-'] {\r\n  float: left;\r\n  padding: 20px 20px 0;\r\n  width: inherit;\r\n}\r\n\r\n#title {\r\n  font-size: 6em;\r\n  white-space: nowrap;\r\n}\r\n\r\n#container {\r\n  font-family: Merienda;\r\n  color: #80c6d9;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n\r\n#main-menu {\r\n  background: rgba(0,0,0,0.7);\r\n  width: 400px;\r\n  height: 800px;\r\n  float: left;\r\n  display: inline-block;\r\n}\r\n\r\n.menu {\r\n  text-align: center;\r\n  font-size: 4em;\r\n  max-height: 120px;\r\n  min-width:120px;\r\n  background-color: rgba(105, 156, 168, 0.4);\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu:hover, .active {\r\n  color: #ff2f3b;\r\n  font-weight: bold;\r\n}\r\n\r\n.separator {\r\n  text-align: center;\r\n}\r\n\r\na {\r\n  text-decoration: inherit;\r\n  color: inherit;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n    <a *ngFor=\"let option of menuOptions\" class=\"col-1-4\"\r\n      routerLink=\"/{{option}}\" [ngClass]=\"{'active': option === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{option}}</span>\r\n      </div>\r\n    </a>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div id=\"container\">\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n\r\n    <a *ngFor=\"let section of sections\" class=\"col-1-4\"\r\n      routerLink=\"/{{section}}\" [ngClass]=\"{'active': section === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{section}}</span>\r\n      </div>\r\n    </a>\r\n\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -288,6 +344,7 @@ module.exports = "<div id=\"container\">\r\n  <div id=\"title\">\r\n    <a route
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__ = __webpack_require__("./src/app/shared/constants/sections.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -298,15 +355,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+var _SECTIONS = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
-        this.menuOptions = ['stories', 'gallery', 'about', 'extras'];
+        this.sections = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
     }
-    HomeComponent.prototype.fadeLeft = function () {
-        $('.menu').fadeOut(1000, function () {
-            console.log('finished fading');
-        });
-    };
     HomeComponent.prototype.ngOnInit = function () {
     };
     __decorate([
@@ -338,7 +392,7 @@ module.exports = ".nav-link {\r\n  text-decoration: none;\r\n  color: white;\r\n
 /***/ "./src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n  <ul class=\"navbar-nav\">\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"#\">Active</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">Link</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\r\n    </li>\r\n  </ul>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n\r\n  <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n    <div class=\"nav-item\">\r\n      <span class=\"nav-link\">{{section}}</span>\r\n    </div>\r\n  </a>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -348,6 +402,7 @@ module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n  <ul 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__ = __webpack_require__("./src/app/shared/constants/sections.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -358,8 +413,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent() {
+        this.sections = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
     }
     NavbarComponent.prototype.ngOnInit = function () {
     };
@@ -374,6 +431,16 @@ var NavbarComponent = /** @class */ (function () {
     return NavbarComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/constants/sections.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SECTIONS; });
+var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
 
 
 /***/ }),
