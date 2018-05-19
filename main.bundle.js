@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "p {\r\n  white-space: pre-wrap;\r\n  font-size: 1.5em;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  background-color: rgba(0,0,0,0.7);\r\n  margin-left: 10px;\r\n  display: inline-block;\r\n  position: absolute;\r\n  overflow-wrap: break-spaces;\r\n}\r\n"
+module.exports = "p {\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  background-color: rgba(0,0,0,0.7);\r\n  margin-left: 10px;\r\n  padding-left: 2.5%;\r\n  display: inline-block;\r\n  position: absolute;\r\n  overflow-wrap: break-spaces;\r\n}\r\n"
 
 /***/ }),
 
@@ -120,14 +120,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "main {\r\n  color: white;\r\n}\r\n\r\n.bg {\r\n  height: 100vh;\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat;\r\n  background-size: cover;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n"
+module.exports = "<main>\n  <div class=\"bg\">\n    <app-navbar></app-navbar>\n    <router-outlet></router-outlet>\n  </div>\n</main>\n"
 
 /***/ }),
 
@@ -334,7 +334,7 @@ module.exports = "[class*='col-'] {\r\n  float: left;\r\n  padding: 20px 20px 0;
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n\r\n    <a *ngFor=\"let section of sections\" class=\"col-1-4\"\r\n      routerLink=\"/{{section}}\" [ngClass]=\"{'active': section === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{section}}</span>\r\n      </div>\r\n    </a>\r\n\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"container\">\r\n\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n    <a *ngFor=\"let section of sections\" class=\"col-1-4\"\r\n      routerLink=\"/{{section}}\" [ngClass]=\"{'active': section === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{section}}</span>\r\n      </div>\r\n    </a>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -356,7 +356,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var _SECTIONS = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
         this.sections = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
@@ -392,7 +391,7 @@ module.exports = ".nav-link {\r\n  text-decoration: none;\r\n  color: white;\r\n
 /***/ "./src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n\r\n  <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n    <div class=\"nav-item\">\r\n      <span class=\"nav-link\">{{section}}</span>\r\n    </div>\r\n  </a>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n\r\n  <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n    <div class=\"nav-item\">\r\n      <span class=\"nav-link\">{{section}}</span>\r\n    </div>\r\n  </a>\r\n\r\n</nav>\r\n"
 
 /***/ }),
 
