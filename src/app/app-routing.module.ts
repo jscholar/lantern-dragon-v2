@@ -5,9 +5,10 @@ import {AboutComponent} from './about/about.component';
 import {StoriesComponent} from './stories/stories.component';
 import {GalleryComponent} from './gallery/gallery.component';
 import {ExtrasComponent} from './extras/extras.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: NavbarComponent },
   { path: 'about', component: AboutComponent},
   { path: 'stories', component: StoriesComponent},
   { path: 'gallery', component: GalleryComponent},

@@ -8,7 +8,7 @@ import {SECTIONS} from '../shared/constants/sections';
 })
 export class HomeComponent implements OnInit {
   sections = SECTIONS;
-  @Input() selected: String;
+  @Input() selected: string;
   constructor() { }
   ngOnInit() {
   }

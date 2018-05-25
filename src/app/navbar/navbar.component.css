@@ -1,8 +1,35 @@
-.nav-link {
-  text-decoration: none;
-  color: white;
+#navbar {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  background: transparent;
+  bottom: 50px;
+  white-space: nowrap;
 }
 
-.navbar {
-  background: transparent;
+.nav-link {
+  text-decoration: none;
+  font-size: 4em;
+  transition: 0.5s;
+  color: #308cd7;
+  font-family: Merienda;
+  text-shadow: 0 0 2px #3e70b0;
+  line-height: 1em;
+}
+
+.nav-link:hover, .active {
+  transition: 0.5s;
+  color: #b4def9;
+  text-shadow: 0 0 30px #e7ecff;
+}
+
+.nav-item {
+  display: inline-block;
+  width: 250px;
+  margin-left: 25px;
+  margin-right: 25px;
 }

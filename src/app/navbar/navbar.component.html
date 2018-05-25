@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-sm fixed-bottom">
+<nav id="navbar">
 
-  <a *ngFor="let section of sections" routerLink="/{{section}}">
-    <div class="nav-item">
-      <span class="nav-link">{{section}}</span>
-    </div>
-  </a>
+    <a *ngFor="let section of sections" routerLink="/{{section}}">
+      <div class="nav-item">
+        <span class="nav-link" (click)="select(section)" [ngClass]="{'active': section === selected}">{{section}}</span>
+      </div>
+    </a>
 
 </nav>
