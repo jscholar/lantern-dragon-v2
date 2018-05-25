@@ -1,0 +1,13 @@
+.story-box {
+  width: 70%;
+  height: 70%;
+  position: fixed;
+  top: 10%;
+  margin: 0 15% 0;
+  border: #e3af5d solid;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  mso-border-shadow: yes;
+  background-color: rgba(0,0,0,0.7);
+}
