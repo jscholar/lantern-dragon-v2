@@ -20,14 +20,14 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "p {\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  background-color: rgba(0,0,0,0.7);\r\n  margin-left: 10px;\r\n  padding-left: 2.5%;\r\n  display: inline-block;\r\n  position: absolute;\r\n  overflow-wrap: break-spaces;\r\n}\r\n"
+module.exports = "p {\r\n  background-color: rgba(0,0,0,0.7);\r\n  border-radius: 25px;\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home [selected]=\"'about'\"></app-home>\r\n\r\n<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection fictional of novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n"
+module.exports = "<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection fictional of novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
 
 /***/ }),
 
@@ -74,11 +74,11 @@ var AboutComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -93,11 +93,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
-    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_3__about_about_component__["a" /* AboutComponent */] },
-    { path: 'stories', component: __WEBPACK_IMPORTED_MODULE_4__stories_stories_component__["a" /* StoriesComponent */] },
-    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_5__gallery_gallery_component__["a" /* GalleryComponent */] },
-    { path: 'extras', component: __WEBPACK_IMPORTED_MODULE_6__extras_extras_component__["a" /* ExtrasComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__navbar_navbar_component__["a" /* NavbarComponent */] },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_2__about_about_component__["a" /* AboutComponent */] },
+    { path: 'stories', component: __WEBPACK_IMPORTED_MODULE_3__stories_stories_component__["a" /* StoriesComponent */] },
+    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_4__gallery_gallery_component__["a" /* GalleryComponent */] },
+    { path: 'extras', component: __WEBPACK_IMPORTED_MODULE_5__extras_extras_component__["a" /* ExtrasComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -120,14 +120,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "main {\r\n  color: white;\r\n}\r\n\r\n.bg {\r\n  height: 100vh;\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat;\r\n  background-size: cover;\r\n}\r\n"
+module.exports = "html, body {\r\n  height: 100%;\r\n  font-family: Merienda;\r\n}\r\n\r\n.bg {\r\n  height: 100vh;\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat;\r\n  background-size: cover;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main>\n  <div class=\"bg\">\n    <app-navbar></app-navbar>\n    <router-outlet></router-outlet>\n  </div>\n</main>\n"
+module.exports = "<main>\n  <div class=\"bg\">\n    <router-outlet></router-outlet>\n  </div>\n</main>\n"
 
 /***/ }),
 
@@ -234,7 +234,7 @@ module.exports = ""
 /***/ "./src/app/extras/extras.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home [selected]=\"'extras'\"></app-home>\n"
+module.exports = "<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
 
 /***/ }),
 
@@ -284,7 +284,7 @@ module.exports = ""
 /***/ "./src/app/gallery/gallery.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home [selected]=\"'gallery'\"></app-home>\n\n<div class=\"container\">\n</div>\n"
+module.exports = "<app-navbar [selected]=\"'gallery'\"></app-navbar>\r\n"
 
 /***/ }),
 
@@ -384,14 +384,14 @@ var HomeComponent = /** @class */ (function () {
 /***/ "./src/app/navbar/navbar.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".nav-link {\r\n  text-decoration: none;\r\n  color: white;\r\n}\r\n\r\n.navbar {\r\n  background: transparent;\r\n}\r\n"
+module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  text-align: center;\r\n  position: fixed;\r\n  background: transparent;\r\n  bottom: 50px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 1em;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  width: 250px;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-sm fixed-bottom\">\r\n\r\n  <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n    <div class=\"nav-item\">\r\n      <span class=\"nav-link\">{{section}}</span>\r\n    </div>\r\n  </a>\r\n\r\n</nav>\r\n"
+module.exports = "<nav id=\"navbar\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n      <div class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n      </div>\r\n    </a>\r\n\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -417,8 +417,15 @@ var NavbarComponent = /** @class */ (function () {
     function NavbarComponent() {
         this.sections = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
     }
+    NavbarComponent.prototype.select = function (section) {
+        this.selected = section;
+    };
     NavbarComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], NavbarComponent.prototype, "selected", void 0);
     NavbarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-navbar',
@@ -447,14 +454,14 @@ var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
 /***/ "./src/app/stories/stories.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".container {\r\n  background: url('cartoon_scroll.f80e33e567e6cae8e913.png') no-repeat;\r\n  background-size: 600px;\r\n  margin-left: 30px;\r\n  float: left;\r\n  width: 600px;\r\n  height: 100vh;\r\n  text-align: center;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  padding: 80px 180px 0 180px;\r\n  font-family: Merienda;\r\n  color: #7d1e0c;\r\n}\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/stories/stories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home [selected]=\"'stories'\"></app-home>\n\n<div class=\"container\">\n  <p class=\"text-block\">So sorry, turns out there's nothing here yet.</p>\n</div>\n"
+module.exports = "<div class=\"container\">\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n"
 
 /***/ }),
 
