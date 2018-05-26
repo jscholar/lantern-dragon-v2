@@ -6,17 +6,18 @@ import {Observable} from 'rxjs/Observable';
 
 export class StoryService {
 
-  private pagesUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages';  // URL to pages api
-  private pages;
+  private storyUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages/548';  // Dragons revolt part 1
+  private pagesUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages?per_page=50';  // URL to pages api
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) {}
 
   // test get pages
-  getPages(): void {
-    this.http.get(this.pagesUrl).subscribe(result => {
-      this.pages = result;
-      console.log(result);
-    });
+  getPages(): Observable<any> {
+    return this.http.get(this.pagesUrl);
+  }
+
+  getStory(): Observable<any> {
+    return this.http.get(this.storyUrl);
   }
 }

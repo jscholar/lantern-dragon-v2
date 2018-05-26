@@ -1,5 +1,15 @@
 <div class="story-box">
-  <button (click)="getPages()">Test, check console</button>
+  <button (click)="getPages()">Test, Pages</button>
+  <button (click)="getStory()">Test, Dragon's Revolt Part 1</button>
+  <div *ngIf="pages" class="story-text">
+    <ul *ngFor="let page of pages">
+      {{page}}
+    </ul>
+  </div>
+  <div *ngIf="story" class="story-text" [innerHTML]="story">
+  </div>
 </div>
 
 <app-navbar [selected]="'stories'"></app-navbar>
+
+

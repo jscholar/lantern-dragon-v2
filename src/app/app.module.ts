@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ExtrasComponent } from './extras/extras.component';
 import {StoryService} from './story.service';
+import {JsonPagesPipe} from './stories/pages.pipe';
 
 
 @NgModule({
@@ -30,7 +31,10 @@ import {StoryService} from './story.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [StoryService],
+  providers: [
+    StoryService,
+    JsonPagesPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

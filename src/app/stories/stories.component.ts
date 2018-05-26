@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../story.service';
+import { JsonPagesPipe } from './pages.pipe';
 
 @Component({
   selector: 'app-stories',
@@ -7,12 +8,23 @@ import { StoryService } from '../story.service';
   styleUrls: ['./stories.component.css']
 })
 export class StoriesComponent implements OnInit {
-
-  constructor(private story: StoryService) { }
+  pages: string[];
+  story: string;
+  constructor(
+    private storyService: StoryService,
+    private pagesPipe: JsonPagesPipe
+  ) { }
     getPages(): void {
-      this.story.getPages();
+      this.storyService.getPages().
+      subscribe(
+        pages => this.pages = this.pagesPipe.transform(pages)
+      );
+    }
+    getStory(): void {
+      this.storyService.getStory().subscribe(
+        story => this.story = story.content.rendered
+      );
     }
   ngOnInit() {
   }
-
 }

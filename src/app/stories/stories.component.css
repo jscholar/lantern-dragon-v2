@@ -10,4 +10,14 @@
   border-radius: 25px;
   mso-border-shadow: yes;
   background-color: rgba(0,0,0,0.7);
+  overflow: scroll;
+}
+
+.story-box::-webkit-scrollbar {
+  display: none;
+}
+
+.story-text {
+  padding: 0 40px 0 20px;
+  color: white;
 }
