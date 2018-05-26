@@ -29,6 +29,7 @@
 
 .nav-item {
   display: inline-block;
+  text-decoration: none;
   width: 250px;
   margin-left: 25px;
   margin-right: 25px;
