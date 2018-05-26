@@ -1,4 +1,4 @@
-<nav id="navbar">
+<nav id="navbar" class="gradient">
 
     <a *ngFor="let section of sections" routerLink="/{{section}}" class="nav-item">
         <span class="nav-link" (click)="select(section)" [ngClass]="{'active': section === selected}">{{section}}</span>
