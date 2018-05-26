@@ -179,12 +179,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__story_service__ = __webpack_require__("./src/app/story.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__stories_pages_pipe__ = __webpack_require__("./src/app/stories/pages.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -218,7 +220,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_12__story_service__["a" /* StoryService */]],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_12__story_service__["a" /* StoryService */],
+                __WEBPACK_IMPORTED_MODULE_13__stories_pages_pipe__["a" /* JsonPagesPipe */]
+            ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -456,17 +461,54 @@ var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
 
 /***/ }),
 
+/***/ "./src/app/stories/pages.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JsonPagesPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var JsonPagesPipe = /** @class */ (function () {
+    function JsonPagesPipe() {
+    }
+    JsonPagesPipe.prototype.transform = function (json) {
+        var pages = [];
+        for (var _i = 0, _a = Object.keys(json); _i < _a.length; _i++) {
+            var page = _a[_i];
+            pages.push(json[page].slug);
+        }
+        return pages;
+    };
+    JsonPagesPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Pipe */])({
+            name: 'pages',
+            pure: false
+        })
+    ], JsonPagesPipe);
+    return JsonPagesPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/stories/stories.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".story-box {\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 25px;\r\n  mso-border-shadow: yes;\r\n  background-color: rgba(0,0,0,0.7);\r\n}\r\n"
+module.exports = ".story-box {\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 25px;\r\n  mso-border-shadow: yes;\r\n  background-color: rgba(0,0,0,0.7);\r\n  overflow: scroll;\r\n}\r\n\r\n.story-box::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/stories/stories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"story-box\">\r\n  <button (click)=\"getPages()\">Test, check console</button>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n"
+module.exports = "<div class=\"story-box\">\r\n  <button (click)=\"getPages()\">Test, Pages</button>\r\n  <button (click)=\"getStory()\">Test, Dragon's Revolt Part 1</button>\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -477,6 +519,7 @@ module.exports = "<div class=\"story-box\">\r\n  <button (click)=\"getPages()\">
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoriesComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__story_service__ = __webpack_require__("./src/app/story.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_pipe__ = __webpack_require__("./src/app/stories/pages.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -488,12 +531,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var StoriesComponent = /** @class */ (function () {
-    function StoriesComponent(story) {
-        this.story = story;
+    function StoriesComponent(storyService, pagesPipe) {
+        this.storyService = storyService;
+        this.pagesPipe = pagesPipe;
     }
     StoriesComponent.prototype.getPages = function () {
-        this.story.getPages();
+        var _this = this;
+        this.storyService.getPages().
+            subscribe(function (pages) { return _this.pages = _this.pagesPipe.transform(pages); });
+    };
+    StoriesComponent.prototype.getStory = function () {
+        var _this = this;
+        this.storyService.getStory().subscribe(function (story) { return _this.story = story.content.rendered; });
     };
     StoriesComponent.prototype.ngOnInit = function () {
     };
@@ -503,7 +554,8 @@ var StoriesComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/stories/stories.component.html"),
             styles: [__webpack_require__("./src/app/stories/stories.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__story_service__["a" /* StoryService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__story_service__["a" /* StoryService */],
+            __WEBPACK_IMPORTED_MODULE_2__pages_pipe__["a" /* JsonPagesPipe */]])
     ], StoriesComponent);
     return StoriesComponent;
 }());
@@ -533,15 +585,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var StoryService = /** @class */ (function () {
     function StoryService(http) {
         this.http = http;
-        this.pagesUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages'; // URL to pages api
+        this.storyUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages/548'; // Dragons revolt part 1
+        this.pagesUrl = 'https://public-api.wordpress.com/wp/v2/sites/lanterndragonworks.wordpress.com/pages?per_page=50'; // URL to pages api
     }
     // test get pages
     StoryService.prototype.getPages = function () {
-        var _this = this;
-        this.http.get(this.pagesUrl).subscribe(function (result) {
-            _this.pages = result;
-            console.log(result);
-        });
+        return this.http.get(this.pagesUrl);
+    };
+    StoryService.prototype.getStory = function () {
+        return this.http.get(this.storyUrl);
     };
     StoryService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
