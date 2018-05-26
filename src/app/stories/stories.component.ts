@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryService } from '../story.service';
 
 @Component({
   selector: 'app-stories',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private story: StoryService) { }
+    getPages(): void {
+      this.story.getPages();
+    }
   ngOnInit() {
   }
 

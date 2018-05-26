@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +11,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ExtrasComponent } from './extras/extras.component';
+import {StoryService} from './story.service';
 
 
 @NgModule({
@@ -25,9 +27,10 @@ import { ExtrasComponent } from './extras/extras.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
