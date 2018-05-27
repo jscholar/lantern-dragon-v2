@@ -27,7 +27,7 @@ module.exports = "p {\r\n  background-color: rgba(0,0,0,0.7);\r\n  border-radius
 /***/ "./src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection fictional of novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
+module.exports = "<div id=\"container\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
 
 /***/ }),
 
@@ -394,14 +394,14 @@ var HomeComponent = /** @class */ (function () {
 /***/ "./src/app/navbar/navbar.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  text-align: center;\r\n  position: fixed;\r\n  background: transparent;\r\n  bottom: 50px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 1em;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  width: 250px;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n"
+module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  height: 150px;\r\n  text-align: center;\r\n  position: fixed;\r\n  bottom: 50px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.gradient { /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\r\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)),color-stop(49%, rgba(0,0,0,0.98)),color-stop(50%, rgba(0,0,0,1)),to(rgba(0,0,0,0)));\r\n  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.98) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\r\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 1em;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  text-decoration: none;\r\n  width: 250px;\r\n  padding: 30px 0;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav id=\"navbar\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\">\r\n      <div class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n      </div>\r\n    </a>\r\n\r\n</nav>\r\n"
+module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n    </a>\r\n\r\n</nav>\r\n"
 
 /***/ }),
 
