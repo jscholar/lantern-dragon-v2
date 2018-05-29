@@ -21,9 +21,11 @@ export class StoriesComponent implements OnInit {
       );
     }
     getStory(): void {
-      this.storyService.getStory().subscribe(
-        story => this.story = story.content.rendered
-      );
+      if (!this.story) {
+        this.storyService.getStory().subscribe(
+          story => this.story = story.content.rendered
+        );
+      }
     }
   ngOnInit() {
   }
