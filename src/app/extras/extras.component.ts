@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./extras.component.css']
 })
 export class ExtrasComponent implements OnInit {
-
+  comments: string[] = [];
   constructor() { }
 
   ngOnInit() {

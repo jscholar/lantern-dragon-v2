@@ -1,33 +1,17 @@
-.story-box {
-  display: block;
-  width: 70%;
-  height: 70%;
-  position: fixed;
-  top: 10%;
-  margin: 0 15% 0;
-  border: #e3af5d solid;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 10px;
-  mso-border-shadow: yes;
-  box-sizing: border-box;
-  background: rgba(0,0,0,0.7);
-  background-clip: content-box;
-  overflow-y: auto;
-}
+@import url('../shared/styles/text-box.css');
 
-.story-box::-webkit-scrollbar {
+.text-box::-webkit-scrollbar {
   width: 10px;
   padding-top: 10px;
 }
 
-.story-box::-webkit-scrollbar-track {
+.text-box::-webkit-scrollbar-track {
   border-radius: 25px;
   box-shadow: inset 0 0 5px grey;
   background-color: black;
 }
 
-.story-box::-webkit-scrollbar-thumb {
+.text-box::-webkit-scrollbar-thumb {
    background: #464646;
   border-radius: 25px;
 }

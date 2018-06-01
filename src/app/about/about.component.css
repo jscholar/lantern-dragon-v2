@@ -1,6 +1,10 @@
+@import url('../shared/styles/text-box.css');
+
+.text-box {
+  height: fit-content;
+}
+
 p {
-  background-color: rgba(0,0,0,0.7);
-  border-radius: 25px;
   padding: 0 20px 30px;
   color: #FFFFFF;
   white-space: pre-line;

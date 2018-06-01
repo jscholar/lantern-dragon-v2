@@ -7,7 +7,7 @@
   height: 150px;
   text-align: center;
   position: fixed;
-  bottom: 50px;
+  bottom: 10px;
   white-space: nowrap;
 }
 
@@ -23,7 +23,7 @@
   font-size: 4em;
   transition: 0.5s;
   color: #308cd7;
-  font-family: Merienda;
+  font-family: Merienda, sans-serif;
   text-shadow: 0 0 2px #3e70b0;
   line-height: 1em;
 }
