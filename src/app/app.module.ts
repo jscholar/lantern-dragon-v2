@@ -5,16 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgGridModule } from 'angular4-grid';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AboutComponent } from './about/about.component';
-import { StoriesComponent } from './stories/stories.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { ExtrasComponent } from './extras/extras.component';
-import {StoryService} from './story.service';
-import {JsonPagesPipe} from './stories/pages.pipe';
-import { NoContentComponent } from './no-content/no-content.component';
+import { AboutComponent } from './components/about/about.component';
+import { StoriesComponent } from './components/stories/stories.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { ExtrasComponent } from './components/extras/extras.component';
+import {StoryService} from './services/story.service';
+import {JsonPagesPipe} from './components/stories/pages.pipe';
+import { NoContentComponent } from './components/no-content/no-content.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NoContentComponent } from './no-content/no-content.component';
     NavbarComponent,
     GalleryComponent,
     ExtrasComponent,
-    NoContentComponent
+    NoContentComponent,
+    CommentsComponent
   ],
   imports: [
     AppRoutingModule,

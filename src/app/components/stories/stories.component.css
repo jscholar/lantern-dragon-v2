@@ -1,4 +1,4 @@
-@import url('../shared/styles/text-box.css');
+@import url('../../shared/styles/text-box.css');
 
 .text-box::-webkit-scrollbar {
   width: 10px;
@@ -19,4 +19,9 @@
 .story-text {
   padding: 0 40px 0 20px;
   color: white;
+}
+
+.cover {
+  margin: 30px;
+  width: 30%;
 }

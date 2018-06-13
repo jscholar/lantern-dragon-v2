@@ -1,0 +1,21 @@
+@media (min-width: 1200px){
+  .container {
+    max-width: 2200px;
+  }
+}
+
+.row {
+  position: relative;
+  top: 50px;
+  margin-bottom: 50px;
+}
+
+.img-thumbnail {
+  margin: 50px;
+  background-color: orange;
+}
+
+.gallery {
+  width: 100%;
+  padding: 6px;
+}

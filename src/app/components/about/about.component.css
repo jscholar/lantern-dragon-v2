@@ -1,4 +1,4 @@
-@import url('../shared/styles/text-box.css');
+@import url('../../shared/styles/text-box.css');
 
 .text-box {
   height: fit-content;

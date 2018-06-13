@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {SECTIONS} from '../shared/constants/sections';
+import {SECTIONS} from '../../shared/constants/sections';
 
 @Component({
   selector: 'app-home',

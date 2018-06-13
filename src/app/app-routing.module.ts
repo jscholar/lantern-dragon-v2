@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import {AboutComponent} from './about/about.component';
-import {StoriesComponent} from './stories/stories.component';
-import {GalleryComponent} from './gallery/gallery.component';
-import {ExtrasComponent} from './extras/extras.component';
-import {NavbarComponent} from './navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import {AboutComponent} from './components/about/about.component';
+import {StoriesComponent} from './components/stories/stories.component';
+import {GalleryComponent} from './components/gallery/gallery.component';
+import {ExtrasComponent} from './components/extras/extras.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', component: NavbarComponent },

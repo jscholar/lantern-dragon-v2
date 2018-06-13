@@ -2,9 +2,3 @@ html, body {
   height: 100%;
   font-family: Merienda;
 }
-
-.bg {
-  height: 100vh;
-  background: url("../assets/bgimgs/night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.jpg") no-repeat;
-  background-size: cover;
-}

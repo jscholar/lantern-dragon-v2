@@ -1,7 +1,0 @@
-<div [ngGrid]="{'max_rows': 3, 'draggable': false, 'auto_resize': true}">
-  <div class="character" *ngFor="let img of mockImgs" [ngGridItem]>
-    <img style="width:100%; object-fit: fill" src="{{img}}">
-  </div>
-</div>
-
-<app-navbar [selected]="'gallery'"></app-navbar>
