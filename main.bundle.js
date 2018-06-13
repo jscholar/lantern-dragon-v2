@@ -17,56 +17,6 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/about/about.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/about/about.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"text-box\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/about/about.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AboutComponent = /** @class */ (function () {
-    function AboutComponent() {
-    }
-    AboutComponent.prototype.ngOnInit = function () {
-    };
-    AboutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-about',
-            template: __webpack_require__("./src/app/about/about.component.html"),
-            styles: [__webpack_require__("./src/app/about/about.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AboutComponent);
-    return AboutComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/app-routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74,11 +24,11 @@ var AboutComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_about_about_component__ = __webpack_require__("./src/app/components/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_stories_stories_component__ = __webpack_require__("./src/app/components/stories/stories.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_gallery_gallery_component__ = __webpack_require__("./src/app/components/gallery/gallery.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_extras_extras_component__ = __webpack_require__("./src/app/components/extras/extras.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -93,11 +43,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__navbar_navbar_component__["a" /* NavbarComponent */] },
-    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_2__about_about_component__["a" /* AboutComponent */] },
-    { path: 'stories', component: __WEBPACK_IMPORTED_MODULE_3__stories_stories_component__["a" /* StoriesComponent */] },
-    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_4__gallery_gallery_component__["a" /* GalleryComponent */] },
-    { path: 'extras', component: __WEBPACK_IMPORTED_MODULE_5__extras_extras_component__["a" /* ExtrasComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__["a" /* NavbarComponent */] },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_2__components_about_about_component__["a" /* AboutComponent */] },
+    { path: 'stories', component: __WEBPACK_IMPORTED_MODULE_3__components_stories_stories_component__["a" /* StoriesComponent */] },
+    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_4__components_gallery_gallery_component__["a" /* GalleryComponent */] },
+    { path: 'extras', component: __WEBPACK_IMPORTED_MODULE_5__components_extras_extras_component__["a" /* ExtrasComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -120,7 +70,7 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "html, body {\r\n  height: 100%;\r\n  font-family: Merienda;\r\n}\r\n\r\n.bg {\r\n  height: 100vh;\r\n  background: url('night-lantern-illustration-temple-lanterns-dragon-382880-pxhere.com.f772f8694fb097e31c6d.jpg') no-repeat;\r\n  background-size: cover;\r\n}\r\n"
+module.exports = "html, body {\r\n  height: 100%;\r\n  font-family: Merienda;\r\n}\r\n"
 
 /***/ }),
 
@@ -172,22 +122,24 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular4_grid__ = __webpack_require__("./node_modules/angular4-grid/main.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stories_stories_component__ = __webpack_require__("./src/app/stories/stories.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__gallery_gallery_component__ = __webpack_require__("./src/app/gallery/gallery.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__extras_extras_component__ = __webpack_require__("./src/app/extras/extras.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__story_service__ = __webpack_require__("./src/app/story.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__stories_pages_pipe__ = __webpack_require__("./src/app/stories/pages.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__no_content_no_content_component__ = __webpack_require__("./src/app/no-content/no-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_about_about_component__ = __webpack_require__("./src/app/components/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_stories_stories_component__ = __webpack_require__("./src/app/components/stories/stories.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_gallery_gallery_component__ = __webpack_require__("./src/app/components/gallery/gallery.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_extras_extras_component__ = __webpack_require__("./src/app/components/extras/extras.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_stories_pages_pipe__ = __webpack_require__("./src/app/components/stories/pages.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_no_content_no_content_component__ = __webpack_require__("./src/app/components/no-content/no-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_comments_comments_component__ = __webpack_require__("./src/app/components/comments/comments.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -211,13 +163,14 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__about_about_component__["a" /* AboutComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__stories_stories_component__["a" /* StoriesComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__navbar_navbar_component__["a" /* NavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__gallery_gallery_component__["a" /* GalleryComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__extras_extras_component__["a" /* ExtrasComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__no_content_no_content_component__["a" /* NoContentComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_about_about_component__["a" /* AboutComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_stories_stories_component__["a" /* StoriesComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_navbar_navbar_component__["a" /* NavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_gallery_gallery_component__["a" /* GalleryComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_extras_extras_component__["a" /* ExtrasComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_no_content_no_content_component__["a" /* NoContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_comments_comments_component__["a" /* CommentsComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
@@ -227,8 +180,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4_angular4_grid__["c" /* NgGridModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_13__story_service__["a" /* StoryService */],
-                __WEBPACK_IMPORTED_MODULE_14__stories_pages_pipe__["a" /* JsonPagesPipe */]
+                __WEBPACK_IMPORTED_MODULE_13__services_story_service__["a" /* StoryService */],
+                __WEBPACK_IMPORTED_MODULE_14__components_stories_pages_pipe__["a" /* JsonPagesPipe */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
@@ -240,21 +193,121 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/extras/extras.component.css":
+/***/ "./src/app/components/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #badcdc;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  margin-left: 25px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.comment {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n#submit {\r\n  margin-left: 30px;\r\n  margin-top: 15px;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./src/app/extras/extras.component.html":
+/***/ "./src/app/components/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <h3>Prototype comments</h3>\r\n\r\n  <form>\r\n    <input type=\"text\" id=\"name\" class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\r\n    <textarea id=\"comment\" class=\"comment-box comment\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\r\n    <button id=\"submit\" (click)=\"submitComment()\">Submit</button>\r\n  </form>\r\n\r\n</div>\r\n\r\n\r\n<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
+module.exports = "<div class=\"text-box\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
 
 /***/ }),
 
-/***/ "./src/app/extras/extras.component.ts":
+/***/ "./src/app/components/about/about.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutComponent = /** @class */ (function () {
+    function AboutComponent() {
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-about',
+            template: __webpack_require__("./src/app/components/about/about.component.html"),
+            styles: [__webpack_require__("./src/app/components/about/about.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutComponent);
+    return AboutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/comments/comments.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 30%;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #badcdc;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  margin-left: 25px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.comment {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n#submit {\r\n  margin-left: 30px;\r\n  margin-top: 15px;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/comments/comments.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n\n  <form>\n    <input type=\"text\" id=\"name\" class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\n    <textarea id=\"comment\" class=\"comment-box comment\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\n    <button id=\"submit\" (click)=\"submitComment()\">Submit</button>\n  </form>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/comments/comments.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommentsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CommentsComponent = /** @class */ (function () {
+    function CommentsComponent() {
+    }
+    CommentsComponent.prototype.ngOnInit = function () {
+    };
+    CommentsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-comments',
+            template: __webpack_require__("./src/app/components/comments/comments.component.html"),
+            styles: [__webpack_require__("./src/app/components/comments/comments.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CommentsComponent);
+    return CommentsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/extras/extras.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/extras/extras.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/extras/extras.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -279,8 +332,8 @@ var ExtrasComponent = /** @class */ (function () {
     ExtrasComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-extras',
-            template: __webpack_require__("./src/app/extras/extras.component.html"),
-            styles: [__webpack_require__("./src/app/extras/extras.component.css")]
+            template: __webpack_require__("./src/app/components/extras/extras.component.html"),
+            styles: [__webpack_require__("./src/app/components/extras/extras.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], ExtrasComponent);
@@ -291,21 +344,21 @@ var ExtrasComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/gallery/gallery.component.css":
+/***/ "./src/app/components/gallery/gallery.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".character {\r\n  width: 15%;\r\n  display: inline-block;\r\n  overflow: hidden;\r\n}\r\n"
+module.exports = "@media (min-width: 1200px){\r\n  .container {\r\n    max-width: 2200px;\r\n  }\r\n}\r\n\r\n.row {\r\n  position: relative;\r\n  top: 50px;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.img-thumbnail {\r\n  margin: 50px;\r\n  background-color: orange;\r\n}\r\n\r\n.gallery {\r\n  width: 100%;\r\n  padding: 6px;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./src/app/gallery/gallery.component.html":
+/***/ "./src/app/components/gallery/gallery.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngGrid]=\"{'max_rows': 3, 'draggable': false, 'auto_resize': true}\">\r\n  <div class=\"character\" *ngFor=\"let img of mockImgs\" [ngGridItem]>\r\n    <img style=\"width:100%; object-fit: fill\" src=\"{{img}}\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'gallery'\"></app-navbar>\r\n"
+module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-4\" *ngFor=\"let img of mockImgs; let index = index\">\r\n      <div *ngIf=\"index <= 3\" class=\"img-thumbnail\">\r\n        <img class=\"gallery\" src=\"{{img}}\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-4\" *ngFor=\"let img of mockImgs; let index = index\">\r\n      <div *ngIf=\"index <= 7 && index > 3\" class=\"img-thumbnail\">\r\n        <img class=\"gallery\" src=\"{{img}}\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'gallery'\"></app-navbar>\r\n"
 
 /***/ }),
 
-/***/ "./src/app/gallery/gallery.component.ts":
+/***/ "./src/app/components/gallery/gallery.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -324,16 +377,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GalleryComponent = /** @class */ (function () {
     function GalleryComponent() {
         this.mockImgs = [
-            '../../assets/imgs/Volume%201%20Art/Characters/FELICITY%20SMOKE%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/ICHAIVAL%20DARRYL%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/ICHIZEN%20MICHI%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/KISAI%20JIN%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/KYOI%20FENG.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/SHAN%20SHIGETZU%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/TOMO%20YUKI%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/YUKA.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/ZHA%20TESS%20R1.jpg',
-            '../../assets/imgs/Volume%201%20Art/Characters/ZHUYU%20LONG%20R1.jpg'
+            '/assets/imgs/Volume%201%20Art/Characters/FELICITY%20SMOKE%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/ICHAIVAL%20DARRYL%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/ICHIZEN%20MICHI%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/KISAI%20JIN%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/KYOI%20FENG.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/SHAN%20SHIGETZU%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/TOMO%20YUKI%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/YUKA.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/ZHA%20TESS%20R1.jpg',
+            '/assets/imgs/Volume%201%20Art/Characters/ZHUYU%20LONG%20R1.jpg'
         ];
     }
     GalleryComponent.prototype.ngOnInit = function () {
@@ -341,8 +394,8 @@ var GalleryComponent = /** @class */ (function () {
     GalleryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-gallery',
-            template: __webpack_require__("./src/app/gallery/gallery.component.html"),
-            styles: [__webpack_require__("./src/app/gallery/gallery.component.css")]
+            template: __webpack_require__("./src/app/components/gallery/gallery.component.html"),
+            styles: [__webpack_require__("./src/app/components/gallery/gallery.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], GalleryComponent);
@@ -353,21 +406,21 @@ var GalleryComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/home/home.component.css":
+/***/ "./src/app/components/home/home.component.css":
 /***/ (function(module, exports) {
 
 module.exports = "[class*='col-'] {\r\n  float: left;\r\n  padding: 20px 20px 0;\r\n  width: inherit;\r\n}\r\n\r\n#title {\r\n  font-size: 6em;\r\n  white-space: nowrap;\r\n}\r\n\r\n#container {\r\n  font-family: Merienda;\r\n  color: #80c6d9;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n\r\n#main-menu {\r\n  background: rgba(0,0,0,0.7);\r\n  width: 400px;\r\n  height: 800px;\r\n  float: left;\r\n  display: inline-block;\r\n}\r\n\r\n.menu {\r\n  text-align: center;\r\n  font-size: 4em;\r\n  max-height: 120px;\r\n  min-width:120px;\r\n  background-color: rgba(105, 156, 168, 0.4);\r\n  border-radius: 5px;\r\n}\r\n\r\n.menu:hover, .active {\r\n  color: #ff2f3b;\r\n  font-weight: bold;\r\n}\r\n\r\n.separator {\r\n  text-align: center;\r\n}\r\n\r\na {\r\n  text-decoration: inherit;\r\n  color: inherit;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./src/app/home/home.component.html":
+/***/ "./src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"container\">\r\n\r\n  <div id=\"title\">\r\n    <a routerLink=\"\">Lantern Dragon Works</a>\r\n  </div>\r\n\r\n  <div id=\"main-menu\">\r\n    <a *ngFor=\"let section of sections\" class=\"col-1-4\"\r\n      routerLink=\"/{{section}}\" [ngClass]=\"{'active': section === selected}\">\r\n      <div class=\"menu\">\r\n        <span>{{section}}</span>\r\n      </div>\r\n    </a>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ "./src/app/home/home.component.ts":
+/***/ "./src/app/components/home/home.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -398,8 +451,8 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
-            template: __webpack_require__("./src/app/home/home.component.html"),
-            styles: [__webpack_require__("./src/app/home/home.component.css")]
+            template: __webpack_require__("./src/app/components/home/home.component.html"),
+            styles: [__webpack_require__("./src/app/components/home/home.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], HomeComponent);
@@ -410,21 +463,21 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/navbar/navbar.component.css":
+/***/ "./src/app/components/navbar/navbar.component.css":
 /***/ (function(module, exports) {
 
 module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  height: 150px;\r\n  text-align: center;\r\n  position: fixed;\r\n  bottom: 10px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.gradient { /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\r\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)),color-stop(49%, rgba(0,0,0,0.98)),color-stop(50%, rgba(0,0,0,1)),to(rgba(0,0,0,0)));\r\n  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.98) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\r\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda, sans-serif;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 1em;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  text-decoration: none;\r\n  width: 250px;\r\n  padding: 30px 0;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./src/app/navbar/navbar.component.html":
+/***/ "./src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n    </a>\r\n\r\n</nav>\r\n"
 
 /***/ }),
 
-/***/ "./src/app/navbar/navbar.component.ts":
+/***/ "./src/app/components/navbar/navbar.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -458,8 +511,8 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-navbar',
-            template: __webpack_require__("./src/app/navbar/navbar.component.html"),
-            styles: [__webpack_require__("./src/app/navbar/navbar.component.css")]
+            template: __webpack_require__("./src/app/components/navbar/navbar.component.html"),
+            styles: [__webpack_require__("./src/app/components/navbar/navbar.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], NavbarComponent);
@@ -470,21 +523,21 @@ var NavbarComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/no-content/no-content.component.css":
+/***/ "./src/app/components/no-content/no-content.component.css":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/no-content/no-content.component.html":
+/***/ "./src/app/components/no-content/no-content.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  no-content works!\n</p>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/no-content/no-content.component.ts":
+/***/ "./src/app/components/no-content/no-content.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -508,8 +561,8 @@ var NoContentComponent = /** @class */ (function () {
     NoContentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-no-content',
-            template: __webpack_require__("./src/app/no-content/no-content.component.html"),
-            styles: [__webpack_require__("./src/app/no-content/no-content.component.css")]
+            template: __webpack_require__("./src/app/components/no-content/no-content.component.html"),
+            styles: [__webpack_require__("./src/app/components/no-content/no-content.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], NoContentComponent);
@@ -520,17 +573,7 @@ var NoContentComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/constants/sections.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SECTIONS; });
-var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
-
-
-/***/ }),
-
-/***/ "./src/app/stories/pages.pipe.ts":
+/***/ "./src/app/components/stories/pages.pipe.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -567,28 +610,28 @@ var JsonPagesPipe = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/stories/stories.component.css":
+/***/ "./src/app/components/stories/stories.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 30%;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "./src/app/stories/stories.component.html":
+/***/ "./src/app/components/stories/stories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <button (click)=\"getStory()\">Test, Dragon's Revolt Part 1</button>\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n\r\n\r\n"
+module.exports = "<div class=\"text-box\">\r\n  <button (click)=\"getStory()\">Test, Dragon's Revolt Part 1</button>\r\n  <div class=\"story\">\r\n    <img class=\"cover\" src=\"../../../assets/imgs/Site%20Art/DragonRevoltCover.jpg\">\r\n  </div>\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n\r\n\r\n"
 
 /***/ }),
 
-/***/ "./src/app/stories/stories.component.ts":
+/***/ "./src/app/components/stories/stories.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoriesComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__story_service__ = __webpack_require__("./src/app/story.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_pipe__ = __webpack_require__("./src/app/stories/pages.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_pipe__ = __webpack_require__("./src/app/components/stories/pages.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -622,10 +665,10 @@ var StoriesComponent = /** @class */ (function () {
     StoriesComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-stories',
-            template: __webpack_require__("./src/app/stories/stories.component.html"),
-            styles: [__webpack_require__("./src/app/stories/stories.component.css")]
+            template: __webpack_require__("./src/app/components/stories/stories.component.html"),
+            styles: [__webpack_require__("./src/app/components/stories/stories.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__story_service__["a" /* StoryService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_story_service__["a" /* StoryService */],
             __WEBPACK_IMPORTED_MODULE_2__pages_pipe__["a" /* JsonPagesPipe */]])
     ], StoriesComponent);
     return StoriesComponent;
@@ -635,7 +678,7 @@ var StoriesComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/story.service.ts":
+/***/ "./src/app/services/story.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -673,6 +716,16 @@ var StoryService = /** @class */ (function () {
     return StoryService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/constants/sections.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SECTIONS; });
+var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
 
 
 /***/ }),
