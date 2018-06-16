@@ -2,13 +2,13 @@
 
 h3 {
   text-align: center;
-  color: #badcdc;
+  color: #FFFFFF;
 }
 
 .comment-box {
   outline: #bebebe solid 1px;
   border: none;
-  margin: 20px 25px 0;
+  margin-top: 20px;
   padding-left: 5px;
   background-color: #535353;
   color: #dfdfdf;
@@ -19,7 +19,7 @@ h3 {
 }
 
 
-.comment {
+.commentInput {
   width: 50%;
   min-width: 20%;
   height: 3rem;
@@ -28,6 +28,10 @@ h3 {
   resize: vertical;
   overflow: hidden;
   color: white;
+}
+
+.comment {
+  word-wrap: break-word;
 }
 
 .comment-box:focus {
@@ -42,7 +46,6 @@ h3 {
   font-style: italic;
 }
 
-#submit {
-  margin-left: 30px;
-  margin-top: 15px;
+.btn {
+  margin-top: 20px;
 }

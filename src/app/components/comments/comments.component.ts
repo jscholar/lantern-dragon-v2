@@ -16,7 +16,7 @@ export class CommentsComponent implements OnInit {
     this.comments = this.commentService.getComments(this.page);
   }
   submitComment(name, content) {
-    console.log(name.value, content.value);
     this.commentService.addComment(name.value, content.value, this.page);
+    name.value = content.value = '';
   }
 }

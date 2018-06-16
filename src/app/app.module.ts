@@ -4,6 +4,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgGridModule } from 'angular4-grid';
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import {CommentService} from './services/comment.service';
 import {JsonPagesPipe} from './components/stories/pages.pipe';
 import { NoContentComponent } from './components/no-content/no-content.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgGridModule
+    NgGridModule,
+    FormsModule
   ],
   providers: [
     StoryService,
