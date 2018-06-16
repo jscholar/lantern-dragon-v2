@@ -130,15 +130,19 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_gallery_gallery_component__ = __webpack_require__("./src/app/components/gallery/gallery.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_extras_extras_component__ = __webpack_require__("./src/app/components/extras/extras.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_stories_pages_pipe__ = __webpack_require__("./src/app/components/stories/pages.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_no_content_no_content_component__ = __webpack_require__("./src/app/components/no-content/no-content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_comments_comments_component__ = __webpack_require__("./src/app/components/comments/comments.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_comment_service__ = __webpack_require__("./src/app/services/comment.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_stories_pages_pipe__ = __webpack_require__("./src/app/components/stories/pages.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_no_content_no_content_component__ = __webpack_require__("./src/app/components/no-content/no-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_comments_comments_component__ = __webpack_require__("./src/app/components/comments/comments.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -169,19 +173,21 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_navbar_navbar_component__["a" /* NavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_gallery_gallery_component__["a" /* GalleryComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_extras_extras_component__["a" /* ExtrasComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__components_no_content_no_content_component__["a" /* NoContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__components_comments_comments_component__["a" /* CommentsComponent */]
+                __WEBPACK_IMPORTED_MODULE_16__components_no_content_no_content_component__["a" /* NoContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_comments_comments_component__["a" /* CommentsComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_4_angular4_grid__["c" /* NgGridModule */]
+                __WEBPACK_IMPORTED_MODULE_4_angular4_grid__["c" /* NgGridModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_forms__["a" /* FormsModule */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_13__services_story_service__["a" /* StoryService */],
-                __WEBPACK_IMPORTED_MODULE_14__components_stories_pages_pipe__["a" /* JsonPagesPipe */]
+                __WEBPACK_IMPORTED_MODULE_15__components_stories_pages_pipe__["a" /* JsonPagesPipe */],
+                __WEBPACK_IMPORTED_MODULE_14__services_comment_service__["a" /* CommentService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
@@ -196,7 +202,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/components/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
 
 /***/ }),
 
@@ -246,14 +252,14 @@ var AboutComponent = /** @class */ (function () {
 /***/ "./src/app/components/comments/comments.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 30%;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #badcdc;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  margin-left: 25px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.comment {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n#submit {\r\n  margin-left: 30px;\r\n  margin-top: 15px;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 400px;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/comments/comments.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n\n  <form>\n    <input type=\"text\" id=\"name\" class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\n    <textarea id=\"comment\" class=\"comment-box comment\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\n    <button id=\"submit\" (click)=\"submitComment()\">Submit</button>\n  </form>\n\n</div>\n"
+module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n  <!--<form>-->\n  <div class=\"container\">\n    <div class=\"form-group\">\n      <input type=\"text\" #name class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\n      <textarea #content class=\"comment-box commentInput\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\n      <button class=\"btn\" (click)=\"submitComment(name, content)\">Submit</button>\n    </div>\n    <div *ngIf=\"commentService.comments[page].length\">\n      <div class=\"comment-box comment\" *ngFor=\"let comment of commentService.comments[page]\">\n        <p>{{comment.name}}</p>\n        <p>{{comment.content}}</p>\n        <p>{{comment.date}}</p>\n      </div>\n    </div>\n  </div>\n  <!--</form>-->\n\n</div>\n"
 
 /***/ }),
 
@@ -263,6 +269,7 @@ module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n\n  <
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommentsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_comment_service__ = __webpack_require__("./src/app/services/comment.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -273,10 +280,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var CommentsComponent = /** @class */ (function () {
-    function CommentsComponent() {
+    function CommentsComponent(commentService) {
+        this.commentService = commentService;
+        this.page = 'extras';
     }
-    CommentsComponent.prototype.ngOnInit = function () {
+    CommentsComponent.prototype.ngOnInit = function () { };
+    CommentsComponent.prototype.submitComment = function (name, content) {
+        this.commentService.addComment(name.value, content.value, this.page);
+        name.value = content.value = '';
     };
     CommentsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -284,7 +297,7 @@ var CommentsComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/components/comments/comments.component.html"),
             styles: [__webpack_require__("./src/app/components/comments/comments.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_comment_service__["a" /* CommentService */]])
     ], CommentsComponent);
     return CommentsComponent;
 }());
@@ -303,7 +316,7 @@ module.exports = ""
 /***/ "./src/app/components/extras/extras.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
+module.exports = "<app-comments></app-comments>\r\n<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
 
 /***/ }),
 
@@ -613,14 +626,14 @@ var JsonPagesPipe = /** @class */ (function () {
 /***/ "./src/app/components/stories/stories.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n   background: #464646;\r\n  border-radius: 25px;\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 30%;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.story-text {\r\n  padding: 0 40px 0 20px;\r\n  color: white;\r\n}\r\n\r\n.cover {\r\n  margin: 30px;\r\n  width: 400px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/stories/stories.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <button (click)=\"getStory()\">Test, Dragon's Revolt Part 1</button>\r\n  <div class=\"story\">\r\n    <img class=\"cover\" src=\"../../../assets/imgs/Site%20Art/DragonRevoltCover.jpg\">\r\n  </div>\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n\r\n\r\n"
+module.exports = "<div class=\"text-box\">\r\n  <button (click)=\"getStory()\">Test, Dragon's Revolt Part 1</button>\r\n  <div class=\"story\">\r\n    <img class=\"cover\" src='./assets/imgs/Site Art/DragonRevoltCover.jpg'>\r\n  </div>\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'stories'\"></app-navbar>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -672,6 +685,47 @@ var StoriesComponent = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_2__pages_pipe__["a" /* JsonPagesPipe */]])
     ], StoriesComponent);
     return StoriesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/comment.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommentService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__ = __webpack_require__("./src/app/shared/models/comment.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CommentService = /** @class */ (function () {
+    function CommentService() {
+        this.comments = {};
+        this.comments['extras'] = [new __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__["a" /* Comment */]('test', 'test')];
+    }
+    CommentService.prototype.addComment = function (name, content, page) {
+        if (!this.comments[page]) {
+            this.comments[page] = [];
+        }
+        this.comments[page].push(new __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__["a" /* Comment */](name.length ? name : 'anon', content));
+        console.log('added comment');
+    };
+    CommentService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], CommentService);
+    return CommentService;
 }());
 
 
@@ -730,6 +784,24 @@ var SECTIONS = ['stories', 'gallery', 'about', 'extras'];
 
 /***/ }),
 
+/***/ "./src/app/shared/models/comment.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Comment; });
+var Comment = /** @class */ (function () {
+    function Comment(name, content) {
+        this.date = Date();
+        this.name = name;
+        this.content = content;
+    }
+    return Comment;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -760,7 +832,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
