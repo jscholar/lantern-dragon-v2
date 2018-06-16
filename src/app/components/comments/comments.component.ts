@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { Comment } from '../../shared/models/comment';
+import { CommentService} from '../../services/comment.service';
 
 @Component({
   selector: 'app-comments',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-
-  constructor() { }
+  page = 'go to hell';
+  comments: Comment[] = [];
+  constructor(public commentService: CommentService) { }
 
   ngOnInit() {
+    this.comments = this.commentService.getComments(this.page);
   }
-
+  submitComment(name, content) {
+    console.log(name.value, content.value);
+    this.commentService.addComment(name.value, content.value, this.page);
+  }
 }

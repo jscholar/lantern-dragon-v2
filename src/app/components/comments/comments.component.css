@@ -8,8 +8,7 @@ h3 {
 .comment-box {
   outline: #bebebe solid 1px;
   border: none;
-  margin-top: 20px;
-  margin-left: 25px;
+  margin: 20px 25px 0;
   padding-left: 5px;
   background-color: #535353;
   color: #dfdfdf;
@@ -19,6 +18,7 @@ h3 {
   width: 25%;
 }
 
+
 .comment {
   width: 50%;
   min-width: 20%;
@@ -27,6 +27,7 @@ h3 {
   max-height: 12rem;
   resize: vertical;
   overflow: hidden;
+  color: white;
 }
 
 .comment-box:focus {

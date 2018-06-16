@@ -12,7 +12,10 @@ import { StoriesComponent } from './components/stories/stories.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ExtrasComponent } from './components/extras/extras.component';
+
 import {StoryService} from './services/story.service';
+import {CommentService} from './services/comment.service';
+
 import {JsonPagesPipe} from './components/stories/pages.pipe';
 import { NoContentComponent } from './components/no-content/no-content.component';
 import { CommentsComponent } from './components/comments/comments.component';
@@ -27,7 +30,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     GalleryComponent,
     ExtrasComponent,
     NoContentComponent,
-    CommentsComponent
+    CommentsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -38,7 +41,8 @@ import { CommentsComponent } from './components/comments/comments.component';
   ],
   providers: [
     StoryService,
-    JsonPagesPipe
+    JsonPagesPipe,
+    CommentService
   ],
   bootstrap: [AppComponent]
 })
