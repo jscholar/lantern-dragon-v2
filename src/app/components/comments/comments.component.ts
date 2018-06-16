@@ -8,14 +8,12 @@ import { CommentService} from '../../services/comment.service';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  page = 'go to hell';
-  comments: Comment[] = [];
+  page = 'extras';
+  comments: Comment[];
   constructor(public commentService: CommentService) { }
 
-  ngOnInit() {
-    this.comments = this.commentService.getComments(this.page);
-  }
-  submitComment(name, content) {
+  ngOnInit() {}
+  submitComment(name, content): void {
     this.commentService.addComment(name.value, content.value, this.page);
     name.value = content.value = '';
   }

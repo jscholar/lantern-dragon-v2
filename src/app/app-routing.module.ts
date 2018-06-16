@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'stories', component: StoriesComponent},
   { path: 'gallery', component: GalleryComponent},
   { path: 'extras', component: ExtrasComponent}
+  // { path: 'stories/:story', component: StoryComponent}
 ];
 
 @NgModule({

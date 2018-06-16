@@ -1,20 +1,20 @@
 <div class="text-box">
   <h3>Prototype comments</h3>
   <!--<form>-->
-    <div class="container">
-      <div class="form-group">
-        <input type="text" #name class="comment-box name" placeholder="name (optional)" maxlength="25" autocomplete="off"><br>
-        <textarea #content class="comment-box commentInput" placeholder="500 characters max" maxlength="500"></textarea><br>
-        <button class="btn" (click)="submitComment(name, content)">Submit</button>
-      </div>
-      <div *ngIf="commentService.comments[page].length">
-        <div class="comment-box comment" *ngFor="let comment of commentService.comments[page]">
-          <p>{{comment.name}}</p>
-          <p>{{comment.content}}</p>
-          <p>{{comment.date}}</p>
-        </div>
+  <div class="container">
+    <div class="form-group">
+      <input type="text" #name class="comment-box name" placeholder="name (optional)" maxlength="25" autocomplete="off"><br>
+      <textarea #content class="comment-box commentInput" placeholder="500 characters max" maxlength="500"></textarea><br>
+      <button class="btn" (click)="submitComment(name, content)">Submit</button>
+    </div>
+    <div *ngIf="commentService.comments[page].length">
+      <div class="comment-box comment" *ngFor="let comment of commentService.comments[page]">
+        <p>{{comment.name}}</p>
+        <p>{{comment.content}}</p>
+        <p>{{comment.date}}</p>
       </div>
     </div>
+  </div>
   <!--</form>-->
 
 </div>

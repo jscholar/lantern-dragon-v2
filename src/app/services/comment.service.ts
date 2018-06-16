@@ -10,7 +10,7 @@ interface Comments {
 export class CommentService {
   comments: Comments = {};
   constructor () {
-    this.comments['go to hell'] = [new Comment('test', 'test')];
+    this.comments['extras'] = [new Comment('test', 'test')];
   }
   addComment(name: string, content: string, page: string) {
     if (!this.comments[page]) {
@@ -18,8 +18,5 @@ export class CommentService {
     }
     this.comments[page].push(new Comment(name.length ? name : 'anon', content));
     console.log('added comment');
-  }
-  getComments(page: string) {
-    return this.comments[page];
   }
 }
