@@ -58,9 +58,9 @@ var AppRoutingModule = /** @class */ (function () {
     AppRoutingModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(routes)
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)
             ],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]]
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -258,7 +258,7 @@ var AboutComponent = /** @class */ (function () {
 /***/ "./src/app/components/comments/comments.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.text-box {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n"
 
 /***/ }),
 
@@ -485,14 +485,14 @@ var HomeComponent = /** @class */ (function () {
 /***/ "./src/app/components/library/library.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.text-box {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/library/library.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <div class=\"frame\">\r\n    <img class=\"cover\" src='./assets/imgs/Site Art/DragonRevoltCover.jpg' routerLink=\"/library/dragons revolution\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'library'\"></app-navbar>\r\n\r\n\r\n"
+module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\">\r\n    <img class=\"cover\" src='./assets/imgs/Site Art/DragonRevoltCover.jpg' routerLink=\"/library/dragons revolution\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'library'\"></app-navbar>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -707,7 +707,7 @@ module.exports = ""
 /***/ "./src/app/components/story/story.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  story works!\n</p>\n"
+module.exports = "<p>Dragons Revolution will go here.</p>\n"
 
 /***/ }),
 
@@ -717,7 +717,9 @@ module.exports = "<p>\n  story works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoryComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -729,11 +731,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var StoryComponent = /** @class */ (function () {
-    function StoryComponent(story) {
-        this.story = story;
+    function StoryComponent(route, location, storyService) {
+        this.route = route;
+        this.location = location;
+        this.storyService = storyService;
     }
     StoryComponent.prototype.ngOnInit = function () {
+    };
+    // Sets the selected story
+    StoryComponent.prototype.getStory = function () {
     };
     StoryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -741,7 +750,9 @@ var StoryComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/components/story/story.component.html"),
             styles: [__webpack_require__("./src/app/components/story/story.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_story_service__["a" /* StoryService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */],
+            __WEBPACK_IMPORTED_MODULE_3__services_story_service__["a" /* StoryService */]])
     ], StoryComponent);
     return StoryComponent;
 }());
