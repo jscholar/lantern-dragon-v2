@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { StoryService } from '../../services/story.service';
@@ -9,10 +9,17 @@ import { StoryService } from '../../services/story.service';
   styleUrls: ['./story.component.css']
 })
 export class StoryComponent implements OnInit {
-
-  constructor(private story: StoryService) { }
+  story: string;
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private storyService: StoryService
+  ) { }
 
   ngOnInit() {
+  }
+  // Sets the selected story
+  getStory(): void {
   }
 
 }
