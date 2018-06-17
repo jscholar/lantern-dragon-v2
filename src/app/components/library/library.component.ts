@@ -3,11 +3,11 @@ import { StoryService } from '../../services/story.service';
 import { JsonPagesPipe } from './pages.pipe';
 
 @Component({
-  selector: 'app-stories',
-  templateUrl: './stories.component.html',
-  styleUrls: ['./stories.component.css']
+  selector: 'app-library',
+  templateUrl: './library.component.html',
+  styleUrls: ['./library.component.css']
 })
-export class StoriesComponent implements OnInit {
+export class LibraryComponent implements OnInit {
   pages: string[];
   story: string;
   constructor(

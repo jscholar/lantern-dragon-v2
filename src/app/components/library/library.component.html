@@ -1,8 +1,9 @@
 <div class="text-box">
-  <button (click)="getStory()">Test, Dragon's Revolt Part 1</button>
-  <div class="story">
-    <img class="cover" src='./assets/imgs/Site Art/DragonRevoltCover.jpg'>
+  <div class="frame">
+    <span class="helper"></span><img class="cover" src='./assets/imgs/Site Art/DragonRevoltCover.jpg'>
   </div>
+
+
   <div *ngIf="pages" class="story-text">
     <ul *ngFor="let page of pages">
       {{page}}
@@ -12,6 +13,6 @@
   </div>
 </div>
 
-<app-navbar [selected]="'stories'"></app-navbar>
+<app-navbar [selected]="'library'"></app-navbar>
 
 

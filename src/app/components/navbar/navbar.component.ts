@@ -9,7 +9,7 @@ import {SECTIONS} from '../../shared/constants/sections';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  sections = SECTIONS;
+  sections: String[];
   @Input() selected: string;
   select(section: string) {
     this.selected = section;
@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.sections = SECTIONS;
   }
 
 }

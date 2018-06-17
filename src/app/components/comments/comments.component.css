@@ -1,4 +1,4 @@
-@import url('../stories/stories.component.css');
+@import url('../library/library.component.css');
 
 h3 {
   text-align: center;
@@ -32,6 +32,7 @@ h3 {
 
 .comment {
   word-wrap: break-word;
+  padding: 0 10px;
 }
 
 .comment-box:focus {

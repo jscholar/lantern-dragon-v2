@@ -42,3 +42,15 @@
   margin-left: 25px;
   margin-right: 25px;
 }
+
+.sprite {
+  display: block;
+  position: fixed;
+  right: 30px;
+  bottom: -4px;
+  z-index: 101;
+}
+
+.sprite img {
+  height: 300px;
+}
