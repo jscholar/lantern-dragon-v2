@@ -1,5 +1,8 @@
+@import url('./shared/styles/bg.css');
+
 html, body {
   height: 100%;
   font-family: Merienda;
   background-color: red;
 }
+
