@@ -73,14 +73,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "html, body {\r\n  height: 100%;\r\n  font-family: Merienda;\r\n  background-color: red;\r\n}\r\n"
+module.exports = ".sitebg {\r\n  /*background-image: url(\"/assets/bgimgs/black_woven_seamless_tile.jpg\");  Dark Weave*/\r\n  background-color: #111111;\r\n  background-size: 100% 100%;\r\n  min-height: 100%;\r\n}\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main>\n  <div class=\"bg\">\n    <router-outlet></router-outlet>\n  </div>\n</main>\n"
+module.exports = "<main class=\"sitebg\">\n  <router-outlet></router-outlet>\n  <app-navbar (changeBG)=\"dark(true)\"></app-navbar>\n</main>\n"
 
 /***/ }),
 
@@ -208,14 +208,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/components/about/about.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.text-box {\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n}\r\n\r\np {\r\n  padding: 0 20px 30px;\r\n  color: #FFFFFF;\r\n  white-space: pre-line;\r\n  font-size: 1.5em;\r\n  text-align: center;\r\n  overflow-wrap: break-spaces;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #b0cdd9;\r\n}\r\n\r\na:hover {\r\n  color: #83c1d9;\r\n  text-decoration: underline;\r\n}\r\n\r\n#container {\r\n  position: fixed;\r\n  width: 70%;\r\n  margin-left: 15%;\r\n  margin-right: 15%;\r\n  top: 10%;\r\n  height: 60%;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n\r\n<app-navbar [selected]=\"'about'\"></app-navbar>\r\n"
+module.exports = "<!--<div class=\"text-box\">-->\r\n    <!--<p>-->\r\n      <!--Welcome.-->\r\n\r\n      <!--Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.-->\r\n\r\n      <!--All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).-->\r\n\r\n      <!--For now, this website is still in its infancy, as are my development skills. Therefore, if you-->\r\n      <!--would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.-->\r\n      <!--Though be sure to come back and visit again when this project becomes awesome.-->\r\n\r\n      <!--Regards, and enjoy your stay,-->\r\n\r\n      <!--A lowly member of the Lantern Dragons Works team.-->\r\n    <!--</p>-->\r\n<!--</div>-->\r\n\r\n\r\n<!--&lt;!&ndash;<app-navbar [selected]=\"'about'\"></app-navbar>&ndash;&gt;-->\r\n"
 
 /***/ }),
 
@@ -258,7 +258,7 @@ var AboutComponent = /** @class */ (function () {
 /***/ "./src/app/components/comments/comments.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  margin: 0 40px;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 33%;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n"
 
 /***/ }),
 
@@ -322,7 +322,7 @@ module.exports = ""
 /***/ "./src/app/components/extras/extras.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-comments></app-comments>\r\n<app-navbar [selected]=\"'extras'\"></app-navbar>\r\n"
+module.exports = "<app-comments></app-comments>\r\n<!--<app-navbar [selected]=\"'extras'\"></app-navbar>-->\r\n"
 
 /***/ }),
 
@@ -366,14 +366,14 @@ var ExtrasComponent = /** @class */ (function () {
 /***/ "./src/app/components/gallery/gallery.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "@media (min-width: 1200px){\r\n  .container {\r\n    max-width: 2200px;\r\n  }\r\n}\r\n\r\n.row {\r\n  position: relative;\r\n  top: 50px;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.img-thumbnail {\r\n  margin: 50px;\r\n  background-color: orange;\r\n}\r\n\r\n.gallery {\r\n  width: 100%;\r\n  padding: 6px;\r\n}\r\n"
+module.exports = ".container {\r\n  width: 84%;\r\n  max-width: none;\r\n  margin: 0 8%;\r\n}\r\n\r\n.row {\r\n  position: relative;\r\n  top: 50px;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.img-thumbnail {\r\n  background-color: orange;\r\n  margin: 0 2%;\r\n}\r\n\r\n.portrait {\r\n  width: 100%;\r\n  padding: 6px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/gallery/gallery.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-4\" *ngFor=\"let img of mockImgs; let index = index\">\r\n      <div *ngIf=\"index <= 3\" class=\"img-thumbnail\">\r\n        <img class=\"gallery\" src=\"{{img}}\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-4\" *ngFor=\"let img of mockImgs; let index = index\">\r\n      <div *ngIf=\"index <= 7 && index > 3\" class=\"img-thumbnail\">\r\n        <img class=\"gallery\" src=\"{{img}}\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'gallery'\"></app-navbar>\r\n"
+module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 col-sm-6\" *ngFor=\"let img of mockImgs; let index = index\">\r\n      <div *ngIf=\"index <= 3\" class=\"img-thumbnail\">\r\n        <img class=\"portrait\" src=\"{{img}}\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!--<app-navbar [selected]=\"'gallery'\"></app-navbar>-->\r\n"
 
 /***/ }),
 
@@ -485,14 +485,14 @@ var HomeComponent = /** @class */ (function () {
 /***/ "./src/app/components/library/library.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 70%;\r\n  height: 70%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 15% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.frame {\r\n  margin: 0 50px;\r\n  width: 30%;\r\n  min-width: 300px;\r\n  height: 70%;\r\n}\r\n\r\n.helper {\r\n  display: inline-block;\r\n  height: 100%;\r\n  vertical-align: middle;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  height: 100%;\r\n  min-width: 300px;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  -webkit-box-shadow: inset 0 0 5px grey;\r\n          box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  margin: 0 40px;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 33%;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/library/library.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\">\r\n    <img class=\"cover\" src='./assets/imgs/Site Art/DragonRevoltCover.jpg' routerLink=\"/library/dragons revolution\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<app-navbar [selected]=\"'library'\"></app-navbar>\r\n\r\n\r\n"
+module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\" *ngFor=\"let book of books\">\r\n    <img class=\"cover\" src={{book.cover}} routerLink=\"/library/{{book.routeUrl}}\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<!--<app-navbar [selected]=\"'library'\"></app-navbar>-->\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -504,6 +504,7 @@ module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\">\r\n 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_story_service__ = __webpack_require__("./src/app/services/story.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_pipe__ = __webpack_require__("./src/app/components/library/pages.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_constants_books__ = __webpack_require__("./src/app/shared/constants/books.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -516,10 +517,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LibraryComponent = /** @class */ (function () {
     function LibraryComponent(storyService, pagesPipe) {
         this.storyService = storyService;
         this.pagesPipe = pagesPipe;
+        this.books = __WEBPACK_IMPORTED_MODULE_3__shared_constants_books__["a" /* BOOKS */];
     }
     LibraryComponent.prototype.getPages = function () {
         var _this = this;
@@ -532,8 +535,7 @@ var LibraryComponent = /** @class */ (function () {
             this.storyService.getStory().subscribe(function (story) { return _this.story = story.content.rendered; });
         }
     };
-    LibraryComponent.prototype.ngOnInit = function () {
-    };
+    LibraryComponent.prototype.ngOnInit = function () { };
     LibraryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-library',
@@ -597,7 +599,7 @@ module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-selec
 /***/ "./src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n    </a>\r\n\r\n</nav>\r\n\r\n<div class=\"sprite\">\r\n  <img src=\"./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png\">\r\n</div>\r\n"
+module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n    </a>\r\n\r\n</nav>\r\n\r\n<div class=\"sprite\">\r\n  <img src=\"./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png\">\r\n  <button class=\"btn-dark\" (click)='dark($event)'>Dark</button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -621,6 +623,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent() {
+        this.changeBG = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
     }
     NavbarComponent.prototype.select = function (section) {
         this.selected = section;
@@ -628,10 +631,17 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.ngOnInit = function () {
         this.sections = __WEBPACK_IMPORTED_MODULE_1__shared_constants_sections__["a" /* SECTIONS */];
     };
+    NavbarComponent.prototype.dark = function () {
+        this.changeBG.emit(true);
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", String)
     ], NavbarComponent.prototype, "selected", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], NavbarComponent.prototype, "changeBG", void 0);
     NavbarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-navbar',
@@ -840,6 +850,32 @@ var StoryService = /** @class */ (function () {
     return StoryService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/constants/books.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BOOKS; });
+var BOOKS = [
+    {
+        title: 'A Dragon\'s Revolt',
+        routeUrl: 'a_dragons_revolt',
+        cover: './assets/imgs/Covers/DragonRevoltCover.jpg'
+    },
+    {
+        title: 'Heroes of the Past',
+        routeUrl: 'heroes_of_the_past',
+        cover: './assets/imgs/Covers/Heroes%20of%20the%20Past%20Cover%20My%20Version.jpg'
+    },
+    {
+        title: 'Masks',
+        routeUrl: 'masks',
+        cover: './assets/imgs/Covers/MaskCover2.jpg'
+    }
+];
 
 
 /***/ }),

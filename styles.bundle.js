@@ -42,7 +42,7 @@ module.exports = "/*!\n * Bootstrap v4.1.1 (https://getbootstrap.com/)\n * Copyr
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "html, body {\r\n  height: 100vh;\r\n}\r\n"
 
 /***/ }),
 
