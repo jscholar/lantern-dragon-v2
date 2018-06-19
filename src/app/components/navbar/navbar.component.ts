@@ -13,7 +13,7 @@ import {SECTIONS} from '../../shared/constants/sections';
 export class NavbarComponent implements OnInit {
   sections: String[];
   @Input() selected: string;
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
+  @Output() changeBG: EventEmitter<boolean> = new EventEmitter<boolean>();
   select(section: string) {
     this.selected = section;
   }
@@ -24,6 +24,6 @@ export class NavbarComponent implements OnInit {
   }
 
   dark() {
-    this.notify.emit('dark');
+    this.changeBG.emit(true);
   }
 }

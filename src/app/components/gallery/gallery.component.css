@@ -1,7 +1,7 @@
-@media (min-width: 1200px){
-  .container {
-    max-width: 2200px;
-  }
+.container {
+  width: 84%;
+  max-width: none;
+  margin: 0 8%;
 }
 
 .row {
@@ -11,11 +11,11 @@
 }
 
 .img-thumbnail {
-  margin: 50px;
   background-color: orange;
+  margin: 0 2%;
 }
 
-.gallery {
+.portrait {
   width: 100%;
   padding: 6px;
 }

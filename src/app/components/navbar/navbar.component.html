@@ -1,3 +1,5 @@
+<router-outlet *ngIf="selected"></router-outlet>
+
 <nav id="navbar" class="gradient">
 
     <a *ngFor="let section of sections" routerLink="/{{section}}" class="nav-item">

@@ -1,8 +1,2 @@
-@import url('./shared/styles/bg.css');
-
-html, body {
-  height: 100%;
-  font-family: Merienda;
-  background-color: red;
-}
+@import url('shared/styles/sitebg.css');
 
