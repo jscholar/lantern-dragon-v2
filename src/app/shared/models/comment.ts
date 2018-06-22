@@ -1,11 +1,13 @@
 export class Comment {
-  date: String;
-  name: String;
-  content: String;
-  constructor (name: String, content: String) {
+  id: string;
+  date: string;
+  name: string;
+  content: string;
+  constructor (name: string, content: string) {
     this.date = Date();
     this.name = name;
     this.content = content;
+    this.id = null;
   }
 
 }
