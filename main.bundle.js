@@ -215,7 +215,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /***/ "./src/app/components/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div class=\"text-box\">-->\r\n    <!--<p>-->\r\n      <!--Welcome.-->\r\n\r\n      <!--Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.-->\r\n\r\n      <!--All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).-->\r\n\r\n      <!--For now, this website is still in its infancy, as are my development skills. Therefore, if you-->\r\n      <!--would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.-->\r\n      <!--Though be sure to come back and visit again when this project becomes awesome.-->\r\n\r\n      <!--Regards, and enjoy your stay,-->\r\n\r\n      <!--A lowly member of the Lantern Dragons Works team.-->\r\n    <!--</p>-->\r\n<!--</div>-->\r\n\r\n\r\n<!--&lt;!&ndash;<app-navbar [selected]=\"'about'\"></app-navbar>&ndash;&gt;-->\r\n"
+module.exports = "<div class=\"text-box\">\r\n    <p>\r\n      Welcome.\r\n\r\n      Lantern Dragon Works is a small collection of fictional novels inspired by Japanese visual novels and themes.\r\n\r\n      All credit for creation, story-writing, and characters go to the sole author, deltaOG (long may he live).\r\n\r\n      For now, this website is still in its infancy, as are my development skills. Therefore, if you\r\n      would like a more complete experience, on a more worthy interface, please visit this <a href=\"https://lanterndragonworks.wordpress.com/\">WordPress page</a> for now.\r\n      Though be sure to come back and visit again when this project becomes awesome.\r\n\r\n      Regards, and enjoy your stay,\r\n\r\n      A lowly member of the Lantern Dragons Works team.\r\n    </p>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -265,7 +265,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /***/ "./src/app/components/comments/comments.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n  <!--<form>-->\n  <div class=\"container\">\n    <div class=\"form-group\">\n      <input type=\"text\" #name class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\n      <textarea #content class=\"comment-box commentInput\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\n      <button class=\"btn\" (click)=\"submitComment(name, content)\">Submit</button>\n    </div>\n    <div *ngIf=\"commentService.comments[page].length\">\n      <div class=\"comment-box comment\" *ngFor=\"let comment of commentService.comments[page]\">\n        <p>{{comment.name}}</p>\n        <p>{{comment.content}}</p>\n        <p>{{comment.date}}</p>\n      </div>\n    </div>\n  </div>\n  <!--</form>-->\n\n</div>\n"
+module.exports = "<div class=\"text-box\">\n  <h3>Prototype comments</h3>\n  <!--<form>-->\n  <div class=\"container\">\n    <div class=\"form-group\">\n      <input type=\"text\" #name class=\"comment-box name\" placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"><br>\n      <textarea #content class=\"comment-box commentInput\" placeholder=\"500 characters max\" maxlength=\"500\"></textarea><br>\n      <button class=\"btn\" (click)=\"submitComment(name, content)\">Submit</button>\n    </div>\n    <div *ngIf=\"comments\">\n      <div class=\"comment-box comment\" *ngFor=\"let comment of comments\">\n        <p>{{comment.name}}</p>\n        <p>{{comment.content}}</p>\n        <p>{{comment.date}}</p>\n      </div>\n    </div>\n  </div>\n  <!--</form>-->\n\n</div>\n"
 
 /***/ }),
 
@@ -290,12 +290,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CommentsComponent = /** @class */ (function () {
     function CommentsComponent(commentService) {
         this.commentService = commentService;
-        this.page = 'extras';
     }
-    CommentsComponent.prototype.ngOnInit = function () { };
+    CommentsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.comments = this.commentService.getComments();
+        this.commentsSub = this.commentService.commentUpdateListener()
+            .subscribe(function (comments) {
+            _this.comments = comments;
+        });
+    };
     CommentsComponent.prototype.submitComment = function (name, content) {
-        this.commentService.addComment(name.value, content.value, this.page);
-        name.value = content.value = '';
+        this.commentService.addComment(name.value, content.value);
+    };
+    CommentsComponent.prototype.ngOnDestroy = function () {
+        this.commentsSub.unsubscribe();
     };
     CommentsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -592,14 +600,14 @@ var JsonPagesPipe = /** @class */ (function () {
 /***/ "./src/app/components/navbar/navbar.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  height: 150px;\r\n  text-align: center;\r\n  position: fixed;\r\n  bottom: 10px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.gradient { /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\r\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)),color-stop(49%, rgba(0,0,0,0.98)),color-stop(50%, rgba(0,0,0,1)),to(rgba(0,0,0,0)));\r\n  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.98) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\r\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda, sans-serif;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 1em;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  text-decoration: none;\r\n  width: 250px;\r\n  padding: 30px 0;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n\r\n.sprite {\r\n  display: block;\r\n  position: fixed;\r\n  right: 30px;\r\n  bottom: -4px;\r\n  z-index: 101;\r\n}\r\n\r\n.sprite img {\r\n  height: 300px;\r\n}\r\n"
+module.exports = "#navbar {\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 100%;\r\n  height: 150px;\r\n  text-align: center;\r\n  position: fixed;\r\n  bottom: 10px;\r\n  white-space: nowrap;\r\n}\r\n\r\n.gradient { /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */\r\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)),color-stop(49%, rgba(0,0,0,0.98)),color-stop(50%, rgba(0,0,0,1)),to(rgba(0,0,0,0)));\r\n  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.98) 49%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\r\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */\r\n}\r\n\r\n.nav-link {\r\n  text-decoration: none;\r\n  font-size: 4em;\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #308cd7;\r\n  font-family: Merienda, sans-serif;\r\n  text-shadow: 0 0 2px #3e70b0;\r\n  line-height: 100px;\r\n}\r\n\r\n.nav-link:hover, .active {\r\n  -webkit-transition: 0.5s;\r\n  transition: 0.5s;\r\n  color: #b4def9;\r\n  text-shadow: 0 0 30px #e7ecff;\r\n}\r\n\r\n.nav-item {\r\n  display: inline-block;\r\n  text-decoration: none;\r\n  width: 250px;\r\n  margin-left: 25px;\r\n  margin-right: 25px;\r\n}\r\n\r\n.sprite {\r\n  display: block;\r\n  position: fixed;\r\n  right: 30px;\r\n  bottom: -4px;\r\n  z-index: 101;\r\n}\r\n\r\n.sprite img {\r\n  height: 300px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item\">\r\n        <span class=\"nav-link\" (click)=\"select(section)\" [ngClass]=\"{'active': section === selected}\">{{section}}</span>\r\n    </a>\r\n\r\n</nav>\r\n\r\n<div class=\"sprite\">\r\n  <img src=\"./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png\">\r\n  <button class=\"btn-dark\" (click)='dark($event)'>Dark</button>\r\n</div>\r\n"
+module.exports = "<nav id=\"navbar\" class=\"gradient\">\r\n\r\n    <a *ngFor=\"let section of sections\" routerLink=\"/{{section}}\" class=\"nav-item nav-link\" routerLinkActive=\"active\">\r\n      {{section}}\r\n    </a>\r\n\r\n</nav>\r\n\r\n<div class=\"sprite\">\r\n  <img src=\"./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png\">\r\n  <button class=\"btn-dark\" (click)='dark($event)'>Dark</button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -778,6 +786,8 @@ var StoryComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommentService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__ = __webpack_require__("./src/app/shared/models/comment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -789,21 +799,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var CommentService = /** @class */ (function () {
-    function CommentService() {
-        this.comments = {};
-        this.comments['extras'] = [new __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__["a" /* Comment */]('test', 'test')];
+    function CommentService(http) {
+        this.http = http;
+        this.comments = [];
+        this.commentsUpdated = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["a" /* Subject */]();
     }
-    CommentService.prototype.addComment = function (name, content, page) {
-        if (!this.comments[page]) {
-            this.comments[page] = [];
-        }
-        this.comments[page].push(new __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__["a" /* Comment */](name.length ? name : 'anon', content));
+    CommentService.prototype.ngOnInit = function () {
+        this.pullComments();
+    };
+    CommentService.prototype.addComment = function (name, content) {
+        this.comments.push(new __WEBPACK_IMPORTED_MODULE_1__shared_models_comment__["a" /* Comment */](name.length ? name : 'anon', content));
+        this.commentsUpdated.next(this.comments.slice());
         console.log('added comment');
+    };
+    CommentService.prototype.commentUpdateListener = function () {
+        return this.commentsUpdated.asObservable();
+    };
+    CommentService.prototype.getComments = function () {
+        return this.comments;
+    };
+    CommentService.prototype.pullComments = function () {
+        var _this = this;
+        this.http.get('http://localhost:3000/api/posts')
+            .subscribe(function (postData) {
+            _this.comments = postData.comments;
+            _this.commentsUpdated.next(_this.comments.slice());
+        });
     };
     CommentService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
     ], CommentService);
     return CommentService;
 }());
@@ -900,6 +928,7 @@ var Comment = /** @class */ (function () {
         this.date = Date();
         this.name = name;
         this.content = content;
+        this.id = null;
     }
     return Comment;
 }());
