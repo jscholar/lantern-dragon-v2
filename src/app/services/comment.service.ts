@@ -1,7 +1,7 @@
 import {Injectable, OnInit} from '@angular/core';
 import { Comment } from '../shared/models/comment';
 import { HttpClient } from '@angular/common/http';
-import {Subject} from 'rxjs/Subject';
+import {Subject} from 'rxjs';
 
 @Injectable()
 
@@ -13,10 +13,13 @@ export class CommentService implements OnInit {
     this.pullComments();
   }
 
-  addComment(name: string, content: string) {
-    this.comments.push(new Comment(name.length ? name : 'anon', content));
-    this.commentsUpdated.next([...this.comments]);
-    console.log('added comment');
+  addComment(comment: Comment) {
+    this.http.post<{message: string}>('http://localhosts:3000/api/posts', comment)
+      .subscribe((responseData) => {
+        console.log(responseData.message);
+        this.comments.push(comment);
+        this.commentsUpdated.next([...this.comments]);
+      });
   }
   commentUpdateListener() {
     return this.commentsUpdated.asObservable();

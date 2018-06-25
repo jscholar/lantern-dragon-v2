@@ -4,13 +4,14 @@
   height: fit-content;
 }
 
-p {
+pre {
   padding: 0 20px 30px;
   color: #FFFFFF;
   white-space: pre-line;
   font-size: 1.5em;
   text-align: center;
   overflow-wrap: break-spaces;
+  font-family: roboto, sans-serif;
 }
 
 a {

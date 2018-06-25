@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Comment } from '../../shared/models/comment';
 import { CommentService} from '../../services/comment.service';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-comments',
@@ -14,14 +15,24 @@ export class CommentsComponent implements OnInit, OnDestroy {
   constructor(public commentService: CommentService) { }
 
   ngOnInit() {
-    this.comments = this.commentService.getComments();
     this.commentsSub = this.commentService.commentUpdateListener()
       .subscribe((comments: Comment[]) => {
         this.comments = comments;
       });
+    this.commentService.pullComments();
   }
-  submitComment(name, content): void {
-    this.commentService.addComment(name.value, content.value);
+  submitComment(form: NgForm): void {
+    if (form.invalid) {
+      return;
+    }
+    const comment: Comment = {
+      user: form.value.user || 'anonymous',
+      content: form.value.content,
+      date: Date(),
+      id: null
+    };
+    this.commentService.addComment(comment);
+    form.reset();
   }
   ngOnDestroy () {
     this.commentsSub.unsubscribe();

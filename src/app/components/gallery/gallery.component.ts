@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { readdir } from 'file-system';
 
 
 @Component({
