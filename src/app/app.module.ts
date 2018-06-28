@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule, MatCardModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -19,7 +21,6 @@ import {CommentService} from './services/comment.service';
 import { JsonPagesPipe } from './components/library/pages.pipe';
 import { NoContentComponent } from './components/no-content/no-content.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { FormsModule } from '@angular/forms';
 import { StoryComponent } from './components/story/story.component';
 
 @NgModule({
@@ -40,7 +41,9 @@ import { StoryComponent } from './components/story/story.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatCardModule
   ],
   providers: [
     StoryService,
