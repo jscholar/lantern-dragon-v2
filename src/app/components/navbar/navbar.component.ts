@@ -12,6 +12,7 @@ import {SECTIONS} from '../../shared/constants/sections';
 
 export class NavbarComponent implements OnInit {
   sections: String[];
+  theme = 'light';
   @Input() selected: string;
   @Output() changeBG: EventEmitter<boolean> = new EventEmitter<boolean>();
   select(section: string) {
@@ -24,6 +25,7 @@ export class NavbarComponent implements OnInit {
   }
 
   dark() {
+    this.theme = this.theme === 'Dark' ? 'Light' : 'Dark';
     this.changeBG.emit(true);
   }
 }

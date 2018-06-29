@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import { Comment } from '../shared/models/comment';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 
@@ -29,10 +30,19 @@ export class CommentService implements OnInit {
   }
 
   pullComments() {
-    this.http.get<{message: string, comments: Comment[]}>('http://localhost:3000/api/posts')
-      .subscribe((postData) => {
-        this.comments = postData.comments;
-        console.log(postData.message);
+    this.http.get<{message: string, comments: any}>('http://localhost:3000/api/posts')
+      .pipe(map((postData) => {
+          return postData.comments.map(comment => {
+            return {
+              user: comment.user,
+              content: comment.content,
+              date: comment.date,
+              id: comment._id
+            };
+          });
+        }))
+      .subscribe((newComments) => {
+        this.comments = newComments;
         this.commentsUpdated.next([...this.comments]);
       });
   }

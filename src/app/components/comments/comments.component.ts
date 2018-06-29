@@ -3,7 +3,6 @@ import { Comment } from '../../shared/models/comment';
 import { CommentService} from '../../services/comment.service';
 import { Subscription } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import { MatFormField } from '@angular/material';
 
 @Component({
   selector: 'app-comments',

@@ -2,18 +2,22 @@
   <h3>Prototype comments</h3>
 
   <div class="container">
-    <form>
-        <input #user type="text"
-               class="comment-box name"
-               placeholder="name (optional)" maxlength="25" autocomplete="off">
+    <mat-card>
+      <form #commentForm="ngForm" (ngSubmit)="submitComment(commentForm)">
+            <input name="user" type="text" matInput
+                   class="comment-box name"
+                   placeholder="name (optional)" maxlength="25" autocomplete="off"
+                   ngModel>
         <br>
-        <textarea #content
-                  class="comment-box commentInput"
-                  placeholder="500 characters max" maxlength="500"
-                  required></textarea>
-        <br>
-        <button type="submit" class="btn">Submit</button>
-    </form>
+            <textarea name="content" matInput
+                      class="comment-box commentInput"
+                      placeholder="500 characters max" maxlength="500"
+                      required
+                      ngModel></textarea>
+            <br>
+            <button type="submit" class="btn">Submit</button>
+      </form>
+    </mat-card>
     <div *ngIf="comments">
       <div class="comment-box comment" *ngFor="let comment of comments">
         <p>{{comment.user}}</p>

@@ -50,3 +50,7 @@ h3 {
 .btn {
   margin-top: 20px;
 }
+
+mat-form-field {
+  display: inline;
+}

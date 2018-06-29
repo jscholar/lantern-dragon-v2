@@ -1,4 +1,4 @@
-<main class="sitebg">
+<main [ngClass]="{'bgLight' : isDark === false, 'bgDark' : isDark}">
   <router-outlet></router-outlet>
-  <app-navbar (changeBG)="dark(true)"></app-navbar>
+  <app-navbar (changeBG)="toggleDark()"></app-navbar>
 </main>

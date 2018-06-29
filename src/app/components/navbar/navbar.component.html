@@ -8,5 +8,5 @@
 
 <div class="sprite">
   <img src="./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png">
-  <button class="btn-dark" (click)='dark($event)'>Dark</button>
+  <button id=theme [ngClass]="{'btn-light' : theme === 'Light', 'btn-dark' : theme === 'Dark'}" (click)='dark($event)'>{{theme}}</button>
 </div>

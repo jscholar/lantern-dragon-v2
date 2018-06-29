@@ -7,4 +7,9 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isDark = true;
+  toggleDark() {
+    this.isDark = !this.isDark;
+    console.log(this.isDark);
+  }
 }

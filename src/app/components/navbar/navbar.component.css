@@ -53,3 +53,8 @@
 .sprite img {
   height: 300px;
 }
+
+#id {
+  width: 50px;
+  display: block;
+}
