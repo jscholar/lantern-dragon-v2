@@ -19,14 +19,16 @@
       </form>
     </mat-card>
     <div *ngIf="comments">
-      <div class="comment-box comment" *ngFor="let comment of comments">
-        <div class="options">
-          <i class="fa fa-trash-o" (click)="deleteComment(comment.id)"></i>
-        </div>
-        <p>{{comment.user}}</p>
-        <p>{{comment.content}}</p>
-        <p>{{comment.date}}</p>
-      </div>
+      <mat-accordion>
+        <mat-expansion-panel class="comment-box comment" *ngFor="let comment of comments">
+          <mat-expansion-panel-header>{{comment.user}}</mat-expansion-panel-header>
+            <div class="options">
+              <i class="fa fa-trash-o" (click)="deleteComment(comment.id)"></i>
+            </div>
+            <p>{{comment.content}}</p>
+            <p>{{comment.date}}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
     </div>
   </div>
 
