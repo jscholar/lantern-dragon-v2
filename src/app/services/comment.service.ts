@@ -15,9 +15,11 @@ export class CommentService implements OnInit {
   }
 
   addComment(comment: Comment) {
-    this.http.post<{message: string}>('http://localhost:3000/api/posts', comment)
+    this.http.post<{message: string, commentId: string}>('http://localhost:3000/api/posts', comment)
       .subscribe((responseData) => {
         console.log(responseData.message);
+        comment.id = responseData.commentId;
+        console.log(comment);
         this.comments.push(comment);
         this.commentsUpdated.next([...this.comments]);
       });
@@ -42,6 +44,15 @@ export class CommentService implements OnInit {
           });
         }))
       .subscribe((newComments) => {
+        this.comments = newComments;
+        this.commentsUpdated.next([...this.comments]);
+      });
+  }
+  deleteComment(commentId: string) {
+    console.log('Send http request');
+    this.http.delete<{message: string}>('http://localhost:3000/api/posts/' + commentId)
+      .subscribe((response) => {
+        const newComments = this.comments.filter(comment => comment.id !== commentId);
         this.comments = newComments;
         this.commentsUpdated.next([...this.comments]);
       });

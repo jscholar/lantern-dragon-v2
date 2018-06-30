@@ -34,6 +34,10 @@ export class CommentsComponent implements OnInit, OnDestroy {
     this.commentService.addComment(comment);
     form.reset();
   }
+  deleteComment(commentId: string) {
+    console.log('component: deleting', commentId);
+    this.commentService.deleteComment(commentId);
+  }
   ngOnDestroy () {
     this.commentsSub.unsubscribe();
   }

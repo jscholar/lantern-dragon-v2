@@ -51,6 +51,18 @@ h3 {
   margin-top: 20px;
 }
 
+.options {
+  position: relative;
+  float: right;
+  top: 10px;
+}
+
+.fa-trash-o:hover {
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+  color: #EE3333;
+}
+
 mat-form-field {
   display: inline;
 }
