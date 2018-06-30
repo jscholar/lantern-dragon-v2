@@ -1,14 +1,12 @@
-
-
 .bgDark {
-  /*background-image: url("/assets/bgimgs/black_woven_seamless_tile.jpg");  Dark Weave*/
-  background-color: #111111;
-  background-size: 100% 100%;
+  background-image: url("/assets/bgimgs/black_woven_seamless_tile.jpg");
   min-height: 100%;
 }
 
 
 .bgLight {
   background-color: #EEEEEE;
+  background-size: 100% 100%;
+  min-height: 100%;
 }
 
