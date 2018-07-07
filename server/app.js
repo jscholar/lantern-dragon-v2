@@ -1,10 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+const commentsRoutes = require('./routes/comments')
+
 const COMMENT_PATH = './models/';
 const COMMENT_MODEL = 'comment.model.js';
 
-const Comment = require(COMMENT_PATH + COMMENT_MODEL);
 const mongoose = require('mongoose');
 
 let pass = '4LHLKB3o43lDctef';
@@ -37,39 +38,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/api/posts", (req, res, next) => {
-  Comment.find()
-    .then(documents => {
-      res.status(200).json({
-        message: "Posts fetched successfully!",
-        comments: documents
-      });
-    });
-});
-
-app.delete("/api/posts/:id", (req, res, next) => {
-  console.log(req.params.id);
-  Comment.deleteOne({_id: req.params.id})
-    .then(result => {
-      console.log(result);
-      res.status(200).json({message: "Comment deleted"})
-    })
-});
-
-app.post("/api/posts", (req, res, next) => {
-  const comment = new Comment({
-    user: req.body.user,
-    content: req.body.content,
-    date: req.body.date
-  });
-  comment.save()
-    .then(newComment => {
-      console.log(newComment);
-      res.status(201).json({
-        message: 'Post added successfully',
-        commentId: newComment.id
-      });
-    });
-});
+app.use("/api/posts", commentsRoutes);
 
 module.exports = app;
