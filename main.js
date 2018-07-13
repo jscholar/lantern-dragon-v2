@@ -88,7 +88,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bgDark {\r\n  background-image: url(\"https://jscholar.github.io/lantern-dragon-v2/assets/bgimgs/black_woven_seamless_tile.jpg\");\r\n  min-height: 100%;\r\n}\r\n\r\n\r\n.bgLight {\r\n  background-color: #EEEEEE;\r\n  background-size: 100% 100%;\r\n  min-height: 100%;\r\n}\r\n\r\n"
+module.exports = ".bgDark {\r\n  background-image: url(\"https://jscholar.github.io/lantern-dragon-v2/assets/bgimgs/black_woven_seamless_tile.jpg\");\r\n  min-height: 100%;\r\n  color: #EEEEEE;\r\n}\r\n\r\n\r\n.bgLight {\r\n  background-color: #EEEEEE;\r\n  background-size: 100% 100%;\r\n  min-height: 100%;\r\n}\r\n\r\n"
 
 /***/ }),
 
@@ -127,7 +127,6 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.toggleDark = function () {
         this.isDark = !this.isDark;
-        console.log(this.isDark);
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -223,7 +222,8 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatExpansionModule"]
             ],
             providers: [
                 _services_story_service__WEBPACK_IMPORTED_MODULE_14__["StoryService"],
@@ -310,7 +310,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 40px;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 33%;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n\r\n.options {\r\n  position: relative;\r\n  float: right;\r\n  top: 10px;\r\n}\r\n\r\n.fa-trash-o:hover {\r\n  transition: 0.15s ease-in-out;\r\n  cursor: pointer;\r\n  color: #EE3333;\r\n}\r\n\r\nmat-form-field {\r\n  display: inline;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 1.5%;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 400px;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n  overflow: hidden;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n\r\nh3 {\r\n  text-align: center;\r\n  color: #FFFFFF;\r\n}\r\n\r\n.comment-box {\r\n  outline: #bebebe solid 1px;\r\n  border: none;\r\n  margin-top: 20px;\r\n  padding-left: 5px;\r\n  background-color: #535353;\r\n  color: #dfdfdf;\r\n}\r\n\r\n.name {\r\n  width: 25%;\r\n}\r\n\r\n.commentInput {\r\n  width: 50%;\r\n  min-width: 20%;\r\n  height: 3rem;\r\n  min-height: 3rem;\r\n  max-height: 12rem;\r\n  resize: vertical;\r\n  overflow: hidden;\r\n  color: white;\r\n}\r\n\r\n.comment {\r\n  word-wrap: break-word;\r\n  padding: 0 10px;\r\n}\r\n\r\n.comment-box:focus {\r\n  outline: #fff6d0 solid 1px;\r\n  outline-offset: 0;\r\n}\r\n\r\n.comment-box::-webkit-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box:-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::-ms-input-placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.comment-box::placeholder{\r\n  padding-left: 3px;\r\n  color: #9e9e9e;\r\n  font-style: italic;\r\n}\r\n\r\n.btn {\r\n  margin-top: 20px;\r\n}\r\n\r\n.options {\r\n  position: relative;\r\n  float: right;\r\n  top: 10px;\r\n}\r\n\r\n.fa-trash-o:hover {\r\n  transition: 0.15s ease-in-out;\r\n  cursor: pointer;\r\n  color: #EE3333;\r\n}\r\n\r\nmat-form-field {\r\n  display: inline;\r\n}\r\n"
 
 /***/ }),
 
@@ -321,7 +321,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <h3>Prototype comments</h3>\r\n\r\n  <div class=\"container\">\r\n    <mat-card>\r\n      <form #commentForm=\"ngForm\" (ngSubmit)=\"submitComment(commentForm)\">\r\n            <input name=\"user\" type=\"text\" matInput\r\n                   class=\"comment-box name\"\r\n                   placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"\r\n                   ngModel>\r\n        <br>\r\n            <textarea name=\"content\" matInput\r\n                      class=\"comment-box commentInput\"\r\n                      placeholder=\"500 characters max\" maxlength=\"500\"\r\n                      required\r\n                      ngModel></textarea>\r\n            <br>\r\n            <button type=\"submit\" class=\"btn\">Submit</button>\r\n      </form>\r\n    </mat-card>\r\n    <div *ngIf=\"comments\">\r\n      <div class=\"comment-box comment\" *ngFor=\"let comment of comments\">\r\n        <div class=\"options\">\r\n          <i class=\"fa fa-trash-o\" (click)=\"deleteComment(comment.id)\"></i>\r\n        </div>\r\n        <p>{{comment.user}}</p>\r\n        <p>{{comment.content}}</p>\r\n        <p>{{comment.date}}</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"text-box\">\r\n  <h3>Prototype comments</h3>\r\n\r\n  <div class=\"container\">\r\n    <mat-card>\r\n      <form #commentForm=\"ngForm\" (ngSubmit)=\"submitComment(commentForm)\">\r\n            <input name=\"user\" type=\"text\" matInput\r\n                   class=\"comment-box name\"\r\n                   placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"\r\n                   ngModel>\r\n        <br>\r\n            <textarea name=\"content\" matInput\r\n                      class=\"comment-box commentInput\"\r\n                      placeholder=\"500 characters max\" maxlength=\"500\"\r\n                      required\r\n                      ngModel></textarea>\r\n            <br>\r\n            <button type=\"submit\" class=\"btn\">Submit</button>\r\n      </form>\r\n    </mat-card>\r\n    <div *ngIf=\"comments\">\r\n      <mat-accordion>\r\n        <mat-expansion-panel class=\"comment-box comment\" *ngFor=\"let comment of comments\">\r\n          <mat-expansion-panel-header>{{comment.user}}</mat-expansion-panel-header>\r\n            <div class=\"options\">\r\n              <i class=\"fa fa-trash-o\" (click)=\"deleteComment(comment.id)\"></i>\r\n            </div>\r\n            <p>{{comment.content}}</p>\r\n            <p>{{comment.date}}</p>\r\n        </mat-expansion-panel>\r\n      </mat-accordion>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -611,7 +611,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 40px;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 33%;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\n.shelf {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.frame {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0 1.5%;\r\n  width: -webkit-fit-content;\r\n  width: -moz-fit-content;\r\n  width: fit-content;\r\n  max-width: 400px;\r\n  height: 100%;\r\n  min-height: 400px;\r\n}\r\n\r\n.cover {\r\n  vertical-align: middle;\r\n  min-width: 400px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-height: 600px;\r\n  width: 100%;\r\n  overflow: hidden;\r\n\r\n}\r\n\r\n.cover:hover {\r\n  cursor: pointer;\r\n}\r\n"
 
 /***/ }),
 
@@ -622,7 +622,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\" *ngFor=\"let book of books\">\r\n    <img class=\"cover\" src={{book.cover}} routerLink=\"/library/{{book.routeUrl}}\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n\r\n<!--<app-navbar [selected]=\"'library'\"></app-navbar>-->\r\n\r\n\r\n"
+module.exports = "<div class=\"text-box shelf\">\r\n  <div class=\"frame\" *ngFor=\"let book of books\">\r\n    <img class=\"cover\" src={{book.cover}} routerLink=\"/library/{{book.routeUrl}}\">\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"pages\" class=\"story-text\">\r\n    <ul *ngFor=\"let page of pages\">\r\n      {{page}}\r\n    </ul>\r\n  </div>\r\n  <div *ngIf=\"story\" class=\"story-text\" [innerHTML]=\"story\">\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -882,7 +882,7 @@ var NoContentComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height: 75%;\r\n  position: fixed;\r\n  top: 10%;\r\n  margin: 0 12.5% 0;\r\n  border: #e3af5d solid;\r\n  border-radius: 10px;\r\n  mso-border-shadow: yes;\r\n  box-sizing: border-box;\r\n  background: rgba(0,0,0,0.7);\r\n  background-clip: content-box;\r\n  overflow-y: auto;\r\n}\r\n\r\n.text-box::-webkit-scrollbar {\r\n  width: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-track {\r\n  border-radius: 25px;\r\n  box-shadow: inset 0 0 5px grey;\r\n  background-color: black;\r\n}\r\n\r\n.text-box::-webkit-scrollbar-thumb {\r\n  border-radius: 25px;\r\n  background-color: rgb(212, 166, 68);\r\n}\r\n\r\ninput[type='file'] {\r\n  visibility: hidden;\r\n}\r\n"
 
 /***/ }),
 
@@ -893,7 +893,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Dragons Revolution will go here.</p>\r\n"
+module.exports = "<p>Dragons Revolution will go here.</p>\r\n\r\n<button (click)=\"getStory()\">getStory</button>\r\n\r\n<div *ngIf=\"htmlText\">\r\n  <div class=\"text-box\" [innerHtml]=\"htmlText\"></div>\r\n</div>\r\n<form>\r\n  <div>\r\n    <button mat-button tupe=\"button\" (click)=\"filePick.click()\">Upload content</button>\r\n    <input type=\"file\" #filePick>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -931,9 +931,24 @@ var StoryComponent = /** @class */ (function () {
         this.storyService = storyService;
     }
     StoryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap.subscribe(function (paramMap) {
+            _this.story = paramMap.get('story');
+            if (paramMap.has('chapter')) {
+                _this.chapter = paramMap.get('chapter');
+            }
+            else {
+                _this.chapter = null;
+            }
+        });
     };
     // Sets the selected story
     StoryComponent.prototype.getStory = function () {
+        var _this = this;
+        this.storyService.getStory().subscribe(function (data) {
+            _this.htmlText = data.content.rendered;
+            console.log(_this.htmlText);
+        });
     };
     StoryComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
