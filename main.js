@@ -220,7 +220,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatExpansionModule"]
@@ -321,7 +321,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-box\">\r\n  <h3>Prototype comments</h3>\r\n\r\n  <div class=\"container\">\r\n    <mat-card>\r\n      <form #commentForm=\"ngForm\" (ngSubmit)=\"submitComment(commentForm)\">\r\n            <input name=\"user\" type=\"text\" matInput\r\n                   class=\"comment-box name\"\r\n                   placeholder=\"name (optional)\" maxlength=\"25\" autocomplete=\"off\"\r\n                   ngModel>\r\n        <br>\r\n            <textarea name=\"content\" matInput\r\n                      class=\"comment-box commentInput\"\r\n                      placeholder=\"500 characters max\" maxlength=\"500\"\r\n                      required\r\n                      ngModel></textarea>\r\n            <br>\r\n            <button type=\"submit\" class=\"btn\">Submit</button>\r\n      </form>\r\n    </mat-card>\r\n    <div *ngIf=\"comments\">\r\n      <mat-accordion>\r\n        <mat-expansion-panel class=\"comment-box comment\" *ngFor=\"let comment of comments\">\r\n          <mat-expansion-panel-header>{{comment.user}}</mat-expansion-panel-header>\r\n            <div class=\"options\">\r\n              <i class=\"fa fa-trash-o\" (click)=\"deleteComment(comment.id)\"></i>\r\n            </div>\r\n            <p>{{comment.content}}</p>\r\n            <p>{{comment.date}}</p>\r\n        </mat-expansion-panel>\r\n      </mat-accordion>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n"
+module.exports = "<div class=\"text-box\">\r\n  <h3>Prototype comments</h3>\r\n\r\n  <div class=\"container\">\r\n    <mat-card>\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"submitComment()\">\r\n            <input name=\"user\" type=\"text\" matInput\r\n                   formControlName=\"user\"\r\n                   class=\"comment-box name\"\r\n                   placeholder=\"name (optional)\" autocomplete=\"off\"\r\n                   >\r\n        <br>\r\n            <textarea name=\"content\" matInput\r\n                      formControlName=\"content\"\r\n                      class=\"comment-box commentInput\"\r\n                      placeholder=\"500 characters max\"\r\n                      ></textarea>\r\n            <br>\r\n            <button type=\"submit\" class=\"btn\">Submit</button>\r\n      </form>\r\n    </mat-card>\r\n    <div *ngIf=\"comments\">\r\n      <mat-accordion>\r\n        <mat-expansion-panel class=\"comment-box comment\" *ngFor=\"let comment of comments\">\r\n          <mat-expansion-panel-header>{{comment.user}}</mat-expansion-panel-header>\r\n            <div class=\"options\">\r\n              <i class=\"fa fa-trash-o\" (click)=\"deleteComment(comment.id)\"></i>\r\n            </div>\r\n            <p>{{comment.content}}</p>\r\n            <p>{{comment.date}}</p>\r\n        </mat-expansion-panel>\r\n      </mat-accordion>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -337,6 +337,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommentsComponent", function() { return CommentsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_comment_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/comment.service */ "./src/app/services/comment.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -348,30 +349,35 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var CommentsComponent = /** @class */ (function () {
     function CommentsComponent(commentService) {
         this.commentService = commentService;
     }
     CommentsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            'user': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, { validators: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(30)] }),
+            'content': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, { validators: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(500)] })
+        });
         this.commentsSub = this.commentService.commentUpdateListener()
             .subscribe(function (comments) {
             _this.comments = comments;
         });
         this.commentService.pullComments();
     };
-    CommentsComponent.prototype.submitComment = function (form) {
-        if (form.invalid) {
+    CommentsComponent.prototype.submitComment = function () {
+        if (this.form.invalid) {
             return;
         }
         var comment = {
-            user: form.value.user || 'anonymous',
-            content: form.value.content,
+            user: this.form.value.user || 'anonymous',
+            content: this.form.value.content,
             date: Date(),
             id: null
         };
         this.commentService.addComment(comment);
-        form.reset();
+        this.form.reset();
     };
     CommentsComponent.prototype.deleteComment = function (commentId) {
         console.log('component: deleting', commentId);
@@ -893,7 +899,7 @@ module.exports = ".text-box {\r\n  display: block;\r\n  width: 75%;\r\n  height:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Dragons Revolution will go here.</p>\r\n\r\n<button (click)=\"getStory()\">getStory</button>\r\n\r\n<div *ngIf=\"htmlText\">\r\n  <div class=\"text-box\" [innerHtml]=\"htmlText\"></div>\r\n</div>\r\n<form>\r\n  <div>\r\n    <button mat-button tupe=\"button\" (click)=\"filePick.click()\">Upload content</button>\r\n    <input type=\"file\" #filePick>\r\n  </div>\r\n</form>\r\n"
+module.exports = "<p>Dragons Revolution will go here.</p>\r\n\r\n<button (click)=\"getStory()\">getStory</button>\r\n\r\n<div *ngIf=\"htmlText\">\r\n  <div class=\"text-box\" [innerHtml]=\"htmlText\"></div>\r\n</div>\r\n<form formGroup=\"file\">\r\n  <div>\r\n    <button mat-button tupe=\"button\" (click)=\"filePick.click()\">Upload content</button>\r\n    <input type=\"file\" #filePick>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -999,13 +1005,14 @@ var CommentService = /** @class */ (function () {
         this.http = http;
         this.comments = [];
         this.commentsUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.url = 'http://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
     }
     CommentService.prototype.ngOnInit = function () {
         this.pullComments();
     };
     CommentService.prototype.addComment = function (comment) {
         var _this = this;
-        this.http.post('http://localhost:3000/api/posts', comment)
+        this.http.post(this.url + '/api/posts', comment)
             .subscribe(function (responseData) {
             console.log(responseData.message);
             comment.id = responseData.commentId;
@@ -1022,7 +1029,7 @@ var CommentService = /** @class */ (function () {
     };
     CommentService.prototype.pullComments = function () {
         var _this = this;
-        this.http.get('http://localhost:3000/api/posts')
+        this.http.get(this.url + '/api/posts')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (postData) {
             return postData.comments.map(function (comment) {
                 return {
@@ -1041,7 +1048,7 @@ var CommentService = /** @class */ (function () {
     CommentService.prototype.deleteComment = function (commentId) {
         var _this = this;
         console.log('Send http request');
-        this.http.delete('http://localhost:3000/api/posts/' + commentId)
+        this.http.delete(this.url + '/api/posts/' + commentId)
             .subscribe(function (response) {
             var newComments = _this.comments.filter(function (comment) { return comment.id !== commentId; });
             _this.comments = newComments;
