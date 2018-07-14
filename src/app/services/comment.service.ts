@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class CommentService implements OnInit {
   private comments: Comment[] = [];
   private commentsUpdated = new Subject<Comment[]>();
-  private url = 'lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
+  private url = 'http://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
   constructor (private http: HttpClient) {}
   ngOnInit () {
     this.pullComments();
