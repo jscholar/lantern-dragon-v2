@@ -9,13 +9,14 @@ import { map } from 'rxjs/operators';
 export class CommentService implements OnInit {
   private comments: Comment[] = [];
   private commentsUpdated = new Subject<Comment[]>();
+  private url = 'http://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
   constructor (private http: HttpClient) {}
   ngOnInit () {
     this.pullComments();
   }
 
   addComment(comment: Comment) {
-    this.http.post<{message: string, commentId: string}>('http://localhost:3000/api/posts', comment)
+    this.http.post<{message: string, commentId: string}>(this.url + '/api/posts', comment)
       .subscribe((responseData) => {
         console.log(responseData.message);
         comment.id = responseData.commentId;
@@ -32,7 +33,7 @@ export class CommentService implements OnInit {
   }
 
   pullComments() {
-    this.http.get<{message: string, comments: any}>('http://localhost:3000/api/posts')
+    this.http.get<{message: string, comments: any}>(this.url + '/api/posts')
       .pipe(map((postData) => {
           return postData.comments.map(comment => {
             return {
@@ -50,7 +51,7 @@ export class CommentService implements OnInit {
   }
   deleteComment(commentId: string) {
     console.log('Send http request');
-    this.http.delete<{message: string}>('http://localhost:3000/api/posts/' + commentId)
+    this.http.delete<{message: string}>(this.url + '/api/posts/' + commentId)
       .subscribe((response) => {
         const newComments = this.comments.filter(comment => comment.id !== commentId);
         this.comments = newComments;
