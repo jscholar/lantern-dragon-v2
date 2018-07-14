@@ -1005,7 +1005,7 @@ var CommentService = /** @class */ (function () {
         this.http = http;
         this.comments = [];
         this.commentsUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
-        this.url = 'https://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
+        this.url = 'http://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
     }
     CommentService.prototype.ngOnInit = function () {
         this.pullComments();
