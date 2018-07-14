@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute,ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { StoryService } from '../../services/story.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-story',
@@ -12,6 +13,7 @@ export class StoryComponent implements OnInit {
   private story: string;
   private chapter: string;
   public htmlText: string;
+  file: FormGroup;
   constructor(
     private route: ActivatedRoute,
     private location: Location,
