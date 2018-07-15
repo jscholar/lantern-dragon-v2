@@ -18,7 +18,7 @@ export class CommentsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.form = new FormGroup({
       'user': new FormControl(null,
-        {validators: [Validators.required, Validators.maxLength(30)]}),
+        {validators: [Validators.maxLength(30)]}),
       'content' : new FormControl(null,
         {validators: [Validators.required, Validators.maxLength(500)]})
     });
