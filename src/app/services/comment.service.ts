@@ -3,13 +3,14 @@ import { Comment } from '../shared/models/comment';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 
 export class CommentService implements OnInit {
   private comments: Comment[] = [];
   private commentsUpdated = new Subject<Comment[]>();
-  private url = 'http://lantern-dragon-v2-server.ffec474y37.us-west-2.elasticbeanstalk.com';
+  private url = environment.apiUrl;
   constructor (private http: HttpClient) {}
   ngOnInit () {
     this.pullComments();
@@ -27,9 +28,6 @@ export class CommentService implements OnInit {
   }
   commentUpdateListener() {
     return this.commentsUpdated.asObservable();
-  }
-  getComments(): Comment[] {
-    return this.comments;
   }
 
   pullComments() {
