@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import {MatInputModule, MatCardModule, MatExpansionModule} from '@angular/material';
+import { MatInputModule, MatCardModule, MatExpansionModule, MatSidenavModule } from '@angular/material';
 import { ReactiveFormsModule} from '@angular/forms';
+
 
 
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ import { StoryComponent } from './components/story/story.component';
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule
   ],
   providers: [
     StoryService,

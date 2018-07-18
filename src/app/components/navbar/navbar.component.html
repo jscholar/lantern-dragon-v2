@@ -1,12 +1,18 @@
-<nav id="navbar" class="gradient">
 
-    <a *ngFor="let section of sections" routerLink="/{{section}}" class="nav-item nav-link" routerLinkActive="active">
-      {{section}}
-    </a>
-
+<nav id="navbar" [ngClass]="{'closed': !open, 'open': open}">
+    <p id="collapse">
+      <i class="fa" [ngClass]="{'fa-caret-up': !this.open, 'fa-caret-down': this.open}"
+         (click)="this.open = !this.open">
+      </i>
+    </p>
+  <a *ngFor="let section of sections" routerLink="/{{section}}" class="nav-item nav-link" routerLinkActive="active">
+    {{section}}
+  </a>
 </nav>
 
 <div class="sprite">
   <img src="./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png">
   <button id=theme [ngClass]="{'btn-light' : theme === 'Light', 'btn-dark' : theme === 'Dark'}" (click)='dark($event)'>{{theme}}</button>
 </div>
+
+
