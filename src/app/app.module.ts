@@ -36,6 +36,7 @@ import { StoryComponent } from './components/story/story.component';
     NoContentComponent,
     CommentsComponent,
     StoryComponent,
+    JsonPagesPipe
   ],
   imports: [
     AppRoutingModule,

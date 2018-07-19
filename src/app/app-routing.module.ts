@@ -8,7 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoryComponent } from './components/story/story.component';
 
 const routes: Routes = [
-  { path: '', component: NavbarComponent },
+ // { path: '', component: NavbarComponent },
   { path: 'about', component: AboutComponent},
   { path: 'library', component: LibraryComponent},
   { path: 'gallery', component: GalleryComponent},
