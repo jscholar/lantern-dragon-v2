@@ -4,9 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "lantern-dragon-v2": {
-      "root": "",
+      "root": "src/app",
       "sourceRoot": "src",
       "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -25,7 +27,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js",
+              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -73,7 +75,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js",
+              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js"
             ],
             "styles": [
               "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/css/bootstrap.css",
