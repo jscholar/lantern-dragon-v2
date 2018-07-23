@@ -4,15 +4,20 @@ import { Location } from '@angular/common';
 import { StoryService } from '../../services/story.service';
 import { FormGroup } from '@angular/forms';
 
+import {STORIES} from '../../shared/constants/stories';
+
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.css']
 })
 export class StoryComponent implements OnInit {
-  private story: string;
+  private storyUrl: string;
+  private stories = STORIES;
+  private story;
   private chapter: string;
   public htmlText: string;
+  public chapters;
   file: FormGroup;
   constructor(
     private route: ActivatedRoute,
@@ -22,19 +27,21 @@ export class StoryComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      this.story = paramMap.get('story');
+      this.storyUrl = paramMap.get('story');
       if (paramMap.has('chapter')) {
         this.chapter = paramMap.get('chapter');
       } else {
         this.chapter = null;
       }
     });
+    this.story = this.stories.find(s => s.routeUrl === this.storyUrl);
+    this.chapters = new Array(...Object.keys(this.story.parts));
+    console.log(this.chapters);
   }
   // Sets the selected story
-  getStory(): void {
-    this.storyService.getStory().subscribe((data: any) => {
+  getStory(chapter): void {
+    this.storyService.getStory(this.story, chapter).subscribe((data: any) => {
       this.htmlText = data.content.rendered;
-      console.log(this.htmlText);
     });
   }
 

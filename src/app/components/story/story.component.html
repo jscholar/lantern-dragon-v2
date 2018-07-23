@@ -1,13 +1,13 @@
-<p>Dragons Revolution will go here.</p>
-
-<button (click)="getStory()">getStory</button>
-
 <div *ngIf="htmlText">
   <div class="text-box" [innerHtml]="htmlText"></div>
 </div>
-<form formGroup="file">
-  <div>
-    <button mat-button tupe="button" (click)="filePick.click()">Upload content</button>
-    <input type="file" #filePick>
-  </div>
-</form>
+
+
+<div>
+  <button mat-button tupe="button" (click)="filePick.click()">Upload content</button>
+  <input type="file" #filePick>
+</div>
+
+<button *ngFor="let chapter of chapters" (click)="this.getStory(chapter)">
+  Chapter {{chapter}}
+</button>
