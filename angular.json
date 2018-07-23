@@ -75,10 +75,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js"
+              "C:/Users/Jin Cai/Apps/lantern-dragon-v2/node_modules/bootstrap/dist/js/bootstrap.js"
             ],
             "styles": [
-              "D:/App/lantern-dragon-v2/node_modules/bootstrap/dist/css/bootstrap.css",
+              "C:/Users/Jin Cai/Apps/lantern-dragon-v2/node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "assets": [
