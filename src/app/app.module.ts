@@ -23,6 +23,7 @@ import { JsonPagesPipe } from './components/library/pages.pipe';
 import { NoContentComponent } from './components/no-content/no-content.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { StoryComponent } from './components/story/story.component';
+import { BioComponent } from './components/bio/bio.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StoryComponent } from './components/story/story.component';
     NoContentComponent,
     CommentsComponent,
     StoryComponent,
-    JsonPagesPipe
+    JsonPagesPipe,
+    BioComponent,
   ],
   imports: [
     AppRoutingModule,
