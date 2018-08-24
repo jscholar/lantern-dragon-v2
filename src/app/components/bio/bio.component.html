@@ -1,3 +1,13 @@
-<p>
-  bio works!
-</p>
+<div class="selectionColumn">
+  <div *ngFor="let character of cast" class="selector" (click)="select(character)">
+    {{character.name}}
+  </div>
+</div>
+
+<div *ngIf="selected">
+  {{selected.name}}
+  {{selected.height}}
+  {{selected.description}}
+  {{selected.powers}}
+  {{selected.weight}}
+</div>

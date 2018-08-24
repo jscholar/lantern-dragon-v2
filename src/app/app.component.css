@@ -2,6 +2,7 @@
   background-image: url("/assets/bgimgs/black_woven_seamless_tile.jpg");
   min-height: 100%;
   color: #EEEEEE;
+  overflow: hidden;
 }
 
 
@@ -9,5 +10,6 @@
   background-color: #EEEEEE;
   background-size: 100% 100%;
   min-height: 100%;
+  overflow: hidden;
 }
 

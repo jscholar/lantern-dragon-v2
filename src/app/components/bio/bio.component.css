@@ -1,0 +1,11 @@
+.selector {
+  padding-top: 1px;
+  background-color: rgba(30,30,30,0.8);
+  margin: 20px 0;
+  font-size: 2em;
+}
+
+.selectionColumn {
+  height: 100%;
+  width: 300px;
+}
