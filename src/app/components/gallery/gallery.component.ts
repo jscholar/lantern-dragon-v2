@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CAST } from '../../shared/constants/cast';
+import { Character } from '../../shared/models/character';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
+
 export class GalleryComponent implements OnInit {
+  cast: Character[] = CAST;
+  selected: Character;
   mockImgs: string[] = [
     './assets/imgs/Volume%201%20Art/Characters/FELICITY%20SMOKE%20R1.jpg',
     './assets/imgs/Volume%201%20Art/Characters/ICHAIVAL%20DARRYL%20R1.jpg',
@@ -21,5 +25,8 @@ export class GalleryComponent implements OnInit {
   ];
   constructor() { }
   ngOnInit() {
+  }
+  select(selected) {
+    this.selected = selected;
   }
 }

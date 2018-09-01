@@ -3,7 +3,7 @@ import { Character } from '../models/character';
 export const CAST: Character[] = [
   {
     name: 'Tomo Yuki',
-    portraitUrl: null,
+    portraitUrl: './assets/heroesArt/tomo/tomo_test_color.png',
     age: '??',
     height: '??',
     weight: '??',
@@ -12,7 +12,7 @@ export const CAST: Character[] = [
   },
   {
     name: 'Zhuyu Long',
-    portraitUrl: null,
+    portraitUrl: './assets/heroesArt/zhuyu/zhuyu_test_color.png',
     age: '??',
     height: '??',
     weight: '??',
@@ -21,7 +21,7 @@ export const CAST: Character[] = [
   },
   {
     name: 'Felicity Smoke',
-    portraitUrl: null,
+    portraitUrl: './assets/heroesArt/felicity/felicity_test_color.png',
     age: '??',
     height: '??',
     weight: '??',

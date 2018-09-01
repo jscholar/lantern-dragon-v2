@@ -5,7 +5,9 @@
   font-size: 2em;
 }
 
-.selectionColumn {
-  height: 100%;
-  width: 300px;
+.portrait {
+  border-radius: 5px;
+  width: 800px;
+  height: auto;
 }
+

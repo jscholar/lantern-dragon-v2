@@ -1,4 +1,8 @@
+<div class="selectionColumn">
+  <div *ngFor="let character of cast" class="selector" (click)="select(character)">
+    {{character.name}}
+  </div>
+</div>
 
 
-<app-bio></app-bio>
-<!--<app-navbar [selected]="'gallery'"></app-navbar>-->
+<app-bio *ngIf="selected" [selected]="selected" class="bio"></app-bio>
