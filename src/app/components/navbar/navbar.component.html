@@ -8,11 +8,8 @@
   <a *ngFor="let section of sections" routerLink="/{{section}}" class="nav-item nav-link" routerLinkActive="active">
     {{section}}
   </a>
+  <div class="sprite">
+    <img src="./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png">
+    <button id=theme [ngClass]="{'btn-light' : theme === 'Light', 'btn-dark' : theme === 'Dark'}" (click)='dark()'>{{theme}}</button>
+  </div>
 </nav>
-
-<div class="sprite">
-  <img src="./assets/imgs/Volume%201%20Art/Characters/zhuyuSprite.png">
-  <button id=theme [ngClass]="{'btn-light' : theme === 'Light', 'btn-dark' : theme === 'Dark'}" (click)='dark()'>{{theme}}</button>
-</div>
-
-
