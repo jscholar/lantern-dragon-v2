@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+app-navbar {
+  z-index: 100;
+  position: fixed;
+}
 
 .bgLight {
   background-color: #EEEEEE;

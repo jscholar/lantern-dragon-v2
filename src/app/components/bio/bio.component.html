@@ -1,10 +1,19 @@
-<div>
-  <div *ngIf="selected">
-    {{selected.name}}<br>
-    height {{selected.height}}<br>
-    powers {{selected.powers}}<br>
-    weight {{selected.weight}}
+<div class='container'>
+  <div class='bio' *ngIf="selected">
+    <div class='frame'>
+      <img class='portrait' src="{{selected.portraitUrl}}">
+    </div>
+    <div class="info">
+      <p class="charName">{{selected.name}} <span *ngIf="selected.trueName">({{selected.trueName}})</span></p>
+      <br>
+      <br>
+      <p><b>AGE:  </b>{{selected.age}}</p>
+      <p><b>HEIGHT:  </b>{{selected.height}}</p>
+      <p><b>WEIGHT:  </b>{{selected.weight}}</p>
+      <p><b>POWERS:  </b>{{selected.powers}}</p>
+      <p>{{selected.description}}</p>
+      <button *ngIf="selected.extra" mat-button color="warn" (click)="toggleSpoilers()">{{spoilButton}}</button>
+      <p *ngIf="spoil" class="description"><em>{{selected.extra}}</em></p>
+    </div>
   </div>
-  <img class='portrait' src="{{selected.portraitUrl}}">
-  <p class="description">{{selected.description}}</p>
 </div>

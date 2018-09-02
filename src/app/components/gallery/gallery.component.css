@@ -11,15 +11,14 @@
 }
 
 .bio {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  position: absolute;
+  left: 200px;
 }
 
 .selectionColumn{
   display: inline-block;
   float: left;
+  margin-left: 20px;
 }
 
 .selector {
