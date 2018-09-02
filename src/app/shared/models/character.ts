@@ -8,4 +8,5 @@ export class Character {
   powers: string;
   description: string;
   extra: string;
+  major: string;
 }

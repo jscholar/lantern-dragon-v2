@@ -1,7 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import { CAST } from '../../shared/constants/cast';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import { Character } from '../../shared/models/character';
-import {InputDecorator} from '@angular/core/src/metadata/directives';
 
 @Component({
   selector: 'app-bio',
@@ -9,14 +7,17 @@ import {InputDecorator} from '@angular/core/src/metadata/directives';
   styleUrls: ['./bio.component.css']
 })
 
-export class BioComponent implements OnInit {
+export class BioComponent implements OnInit, OnChanges {
   @Input() selected: Character;
-  cast: Character[] = CAST;
   spoil: boolean;
   spoilButton: string;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.spoil = false;
+    this.spoilButton = '*Show Spoilers*';
+  }
+  ngOnChanges() {
     this.spoil = false;
     this.spoilButton = '*Show Spoilers*';
   }
