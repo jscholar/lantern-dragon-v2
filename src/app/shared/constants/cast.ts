@@ -23,7 +23,7 @@ export const CAST: Character[] = [
     name: 'Zhuyu Long',
     trueName: '助由 龙',
     portraitUrl: './assets/heroesArt/zhuyu/zhuyu_test_color.png',
-    age: '??',
+    age: '19',
     height: '5\' 8\"',
     weight: '140 lb.',
     powers: 'Zero-Vector',
