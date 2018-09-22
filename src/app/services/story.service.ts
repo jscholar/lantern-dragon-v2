@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {FormGroup} from '@angular/forms';
+import { Story } from '../shared/models/story';
 
 
 import {STORIES} from '../shared/constants/stories';
@@ -21,6 +22,6 @@ export class StoryService {
   }
 
   getStory(story, chapter): Observable<any> {
-    return this.http.get(this.storyUrl + this.stories[0].parts[chapter]);
+    return this.http.get(this.storyUrl + story.parts[chapter]);
   }
 }

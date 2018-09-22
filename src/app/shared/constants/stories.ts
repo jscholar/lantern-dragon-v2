@@ -6,13 +6,13 @@ export const STORIES: Story[] = [
     routeUrl: 'a_dragons_revolt',
     cover: './assets/imgs/Covers/DragonRevoltCover.jpg',
     parts: {
-      1: '548',
-      2: '554',
-      3: '556',
-      4: '558',
-      5: '562',
-      6: '564',
-      7: '566'
+      'One': '548',
+      'Two': '554',
+      'Three': '556',
+      'Four': '558',
+      'Five': '562',
+      'Six': '564',
+      'Seven': '566'
     }
   },
   {
@@ -25,6 +25,8 @@ export const STORIES: Story[] = [
     title: 'Masks',
     routeUrl: 'masks',
     cover: './assets/imgs/Covers/MaskCover2.jpg',
-    parts: null
+    parts: {
+      'Sparring Practice': '230'
+    }
   }
 ];

@@ -11,8 +11,7 @@ app-navbar {
 }
 
 .bgLight {
-  background-color: #EEEEEE;
-  background-size: 100% 100%;
+  background-image: url("/assets/bgimgs/light_tile.jpg");
   min-height: 100%;
   overflow: hidden;
 }

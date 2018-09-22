@@ -1,8 +1,7 @@
 <div class="selectionColumn">
   <div *ngFor="let character of cast" class="selector" (click)="select(character)">
-    {{character.name}}
+    <span [ngClass]="{'selected': selected && selected.name === character.name}">{{character.name}}</span>
   </div>
 </div>
-
 
 <app-bio *ngIf="selected" [selected]="selected" class="bio"></app-bio>

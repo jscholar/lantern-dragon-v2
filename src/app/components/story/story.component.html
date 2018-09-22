@@ -1,5 +1,7 @@
 <div *ngIf="htmlText">
-  <div class="text-box" [innerHtml]="htmlText"></div>
+  <div class="text-box">
+    <div [innerHtml]="htmlText"></div>
+  </div>
 </div>
 
 
@@ -9,5 +11,5 @@
 </div>
 
 <button *ngFor="let chapter of chapters" (click)="this.getStory(chapter)">
-  Chapter {{chapter}}
+  Chapter: {{chapter}}
 </button>

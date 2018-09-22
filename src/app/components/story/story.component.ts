@@ -36,7 +36,6 @@ export class StoryComponent implements OnInit {
     });
     this.story = this.stories.find(s => s.routeUrl === this.storyUrl);
     this.chapters = new Array(...Object.keys(this.story.parts));
-    console.log(this.chapters);
   }
   // Sets the selected story
   getStory(chapter): void {

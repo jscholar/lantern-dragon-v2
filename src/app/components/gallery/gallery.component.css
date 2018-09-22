@@ -29,3 +29,7 @@
 .selector:hover {
   color: rgba(255, 156, 13, 0.76);
 }
+
+.selected {
+  color: #ec7f66;
+}
