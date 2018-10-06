@@ -68,11 +68,11 @@ export const CAST: Character[] = [
   },
   {
     name: 'Shan Shigetzu',
-    trueName: '師戲武 善',
+    trueName: '善 師戲武',
     portraitUrl: './assets/heroesArt/shan/shan_test_color.png',
     age: '21',
     height: '6\' 3\"',
-    weight: '150 lb.',
+    weight: '175 lb.',
     powers: 'Gravity Manipulation, Mind-Scan',
     major: 'Bioengineering',
     description: 'Darryl refers to him as “that bastard” and for good reason. He’s often belittling Darryl' +
@@ -145,11 +145,11 @@ export const CAST: Character[] = [
   {
     name: 'Zha Tess',
     trueName: '闸',
-    portraitUrl: '',
+    portraitUrl: './assets/heroesArt/tess/tess_profile.png',
     age: '20',
     height: '5\' 10\"',
     weight: '134 lb.',
-    powers: 'Gatekeeer',
+    powers: 'Gatekeeper',
     major: 'Bachelor Completed, Completing Masters in Mathematics, Biochemistry, and Engineering',
     description: 'A gifted intellectual whose social skills leave something to be desired,' +
     ' but still manages to draw people in with her overall aura. Never speaks much about herself,' +

@@ -1,1 +1,1 @@
-export const SECTIONS: String[] = ['library', 'gallery', 'about', 'extras'];
+export const SECTIONS: String[] = ['library', 'gallery', 'about', 'extras', 'credits'];

@@ -18,11 +18,6 @@ export class LibraryComponent implements OnInit {
     private storyService: StoryService,
     private pagesPipe: JsonPagesPipe
   ) { }
-    getPages(): void {
-      this.storyService.getPages().
-      subscribe(
-        pages => this.pages = this.pagesPipe.transform(pages)
-      );
-    }
+
   ngOnInit() {}
 }

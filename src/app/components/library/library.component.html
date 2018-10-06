@@ -2,13 +2,4 @@
   <div class="frame" *ngFor="let story of stories">
     <img class="cover" src={{story.cover}} routerLink="/library/{{story.routeUrl}}">
   </div>
-
-
-  <div *ngIf="pages" class="story-text">
-    <ul *ngFor="let page of pages">
-      {{page}}
-    </ul>
-  </div>
-  <div *ngIf="story" class="story-text" [innerHTML]="story">
-  </div>
 </div>

@@ -1,18 +1,9 @@
-.container {
-  background: none;
-  width: 84%;
-  max-width: none;
-  margin: 0 8%;
-}
-
-.portrait {
-  width: 100%;
-  padding: 6px;
-}
-
 .bio {
   position: absolute;
-  left: 200px;
+  left: 150px;
+  height: 80%;
+  width: auto;
+  margin-right: 5%;
 }
 
 .selectionColumn{

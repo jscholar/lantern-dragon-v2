@@ -26,6 +26,12 @@ export const STORIES: Story[] = [
     routeUrl: 'masks',
     cover: './assets/imgs/Covers/MaskCover2.jpg',
     parts: {
+      'A Chance Encounter': '197',
+      'Interest': '211',
+      'Her Past': '214',
+      'A Slight Thaw': '217',
+      'Opportunity': '219',
+      'The Masquerade': '223',
       'Sparring Practice': '230'
     }
   }

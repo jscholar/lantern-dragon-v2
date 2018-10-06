@@ -1,5 +1,44 @@
-@import url('../../shared/styles/text-box.css');
+.text-box {
+  display: block;
+  width: 80%;
+  height: 75%;
+  position: fixed;
+  top: 10%;
+  margin: 0 12.5% 0;
+  padding: 0 5px;
+  /*border: #e3af5d solid;*/
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 10px;
+  mso-border-shadow: yes;
+  box-sizing: border-box;
+  /*background: rgba(0,0,0,0.7);*/
+  background-clip: content-box;
+  overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+  width: 4px;
+  padding-top: 10px;
+}
+
+.text-box::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.text-box::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 149, 149, 0.9);
+}
+
 
 input[type='file'] {
   visibility: hidden;
+}
+
+.chapterBar {
+  text-align: center;
+}
+
+.chapter {
+  margin: 2px;
 }

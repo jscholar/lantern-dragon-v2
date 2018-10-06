@@ -10,6 +10,8 @@
   <input type="file" #filePick>
 </div>
 
-<button *ngFor="let chapter of chapters" (click)="this.getStory(chapter)">
-  Chapter: {{chapter}}
-</button>
+<div class="chapterBar">
+  <button *ngFor="let chapter of chapters" class="chapter" (click)="this.getStory(chapter)">
+    Chapter: {{chapter}}
+  </button>
+</div>
